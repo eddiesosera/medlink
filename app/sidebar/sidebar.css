@@ -2,6 +2,10 @@ body {
     margin: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 /* SIDE BAR PARENT CONTAINER */
 .sidebar-container {
     height: 100vh;
@@ -21,7 +25,7 @@ body {
 .sidebar-top-container {
     display: flex;
     flex-direction: column;
-    padding: 10px 20px;
+    padding: 20px 20px;
     background: #f9fffe;
     gap: 30px;
     border-radius: 20px;
@@ -72,7 +76,7 @@ body {
     font-family: 'Archivo';
     cursor: pointer;
     width: 100%;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 #sidebar-top-top-btmBtn-icon {
@@ -107,6 +111,7 @@ body {
     color: #FFF1C6;
     font-family: 'Archivo';
     cursor: pointer;
+    text-decoration: none;
     /* width: 100%; */
 }
 
@@ -119,6 +124,7 @@ body {
     margin-left: 10px;
     font-size: 15px;
     font-weight: 500;
+    text-decoration: none;
 }
 
 /* Inactive page */
@@ -131,20 +137,23 @@ body {
     border-radius: 12px;
     background: none;
     color: #264228;
+    fill: #264228;
     font-family: 'Archivo';
     cursor: pointer;
+    text-decoration: none;
     /* width: 100%; */
 }
 
 .inactive-sidebar-icon {
     fill: #264228;
-    height: 18px;
+    height: 18px !important;
 }
 
 .inactive-sidebar-text {
     margin-left: 10px;
     font-size: 15px;
     font-weight: 500;
+    text-decoration: none;
 }
 
 /* Logout section */
