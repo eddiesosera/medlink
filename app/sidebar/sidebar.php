@@ -97,7 +97,7 @@
             document.getElementById("sidebar-mid-homeWrap").classList.remove('inactive-sidebar-wrap');
             document.getElementById("sidebar-mid-home-icon").classList.remove('inactive-sidebar-icon');
 
-            alert('i work, i work')
+            // alert('Home')
         } else {
             document.getElementById("sidebar-mid-homeWrap").classList.remove('active-sidebar-wrap');
             document.getElementById("sidebar-mid-home-icon").classList.remove('active-sidebar-icon');
@@ -106,13 +106,13 @@
         }
 
         // Activate or Deactivate PATIENTS Page on Navbar based on pathname
-        if (window.location.pathname === '/DV200_Term2_Receptionist-Dashboard/Term-2/app/') {
+        if (window.location.pathname === '/DV200_Term2_Receptionist-Dashboard/Term-2/app/patients.php') {
             document.getElementById("sidebar-mid-patientWrap").classList.add('active-sidebar-wrap');
             document.getElementById("sidebar-mid-patient-icon").classList.add('active-sidebar-icon');
             document.getElementById("sidebar-mid-patientWrap").classList.remove('inactive-sidebar-wrap');
             document.getElementById("sidebar-mid-patient-icon").classList.remove('inactive-sidebar-icon');
 
-            alert('i work, i work')
+            // alert('Patients')
         } else {
             document.getElementById("sidebar-mid-patientWrap").classList.remove('active-sidebar-wrap');
             document.getElementById("sidebar-mid-patient-icon").classList.remove('active-sidebar-icon');
@@ -121,13 +121,13 @@
         }
 
         // Activate or Deactivate DOCTORS Page on Navbar based on pathname
-        if (window.location.pathname === '/DV200_Term2_Receptionist-Dashboard/Term-2/app/') {
+        if (window.location.pathname === '/DV200_Term2_Receptionist-Dashboard/Term-2/app/doctors.php') {
             document.getElementById("sidebar-mid-doctorWrap").classList.add('active-sidebar-wrap');
             document.getElementById("sidebar-mid-doctor-icon").classList.add('active-sidebar-icon');
             document.getElementById("sidebar-mid-doctorWrap").classList.remove('inactive-sidebar-wrap');
             document.getElementById("sidebar-mid-doctor-icon").classList.remove('inactive-sidebar-icon');
 
-            alert('i work, i work')
+            // alert('Doctor')
         } else {
             document.getElementById("sidebar-mid-doctorWrap").classList.remove('active-sidebar-wrap');
             document.getElementById("sidebar-mid-doctor-icon").classList.remove('active-sidebar-icon');
