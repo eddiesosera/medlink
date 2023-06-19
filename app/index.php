@@ -11,5 +11,11 @@
 </head>
 <body>
 
+<!-- Sidebar init -->
+<?php 
+      include './sidebar/sidebar.php'; 
+    ?>
+
+
 </body>
 </html>
