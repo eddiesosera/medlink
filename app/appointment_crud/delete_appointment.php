@@ -1,14 +1,14 @@
 <?php
 
-include "../config.php";
+include "config.php";
 
 $id = $_GET["id"];
 
-$sql = "DELETE FROM therapysession where id = $id";
+$sql = "DELETE FROM therapysession where therapySession_id = $id";
 
 $con -> query($sql);
 $con-> close();
 
-header("location: index.php")
+header("location: index.php");
 
 ?>

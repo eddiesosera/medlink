@@ -1,6 +1,6 @@
 <?php
 
-include "../config.php";
+include "config.php";
 
 $id = $_POST['id'];
 $patient = $_POST["patient"];
@@ -11,7 +11,7 @@ $session_status = $_POST["session_status"];
 $attendace = $_POST["attendence"];
 
 $sql = "UPDATE therapysession SET receptionist_id=$receptionist, patient_id=$patient,
-doctor_id=$doctor, session_date=$date, session_status=$session_status , attended=$attendace WHERE id=$id";
+doctor_id=$doctor, session_date=$date, session_status=$session_status , attended=$attendace WHERE therapySession_id=$id";
 
 $result = $con->query($sql);
 $con->close();

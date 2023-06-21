@@ -10,6 +10,7 @@
     <?php include 'index.css';
     ?>
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
@@ -17,6 +18,11 @@
     <!-- Sidebar init -->
     <?php 
       include './sidebar/sidebar.php'; 
+    ?>
+
+    <!-- Home Content -->
+    <?php 
+      include './home.php'; 
     ?>
 
 

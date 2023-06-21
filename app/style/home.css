@@ -1,0 +1,85 @@
+body{
+    font-family: 'Archivo';
+}
+.home_content-wrap{
+/* margin-left: 281px; */
+position: fixed;
+width: 80%;
+right: 20px;
+
+}
+
+.home_content_top-wrap{
+width: 100%;
+height: 350px;
+}
+
+.home_content_top-imgbg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+}
+
+/* Responsive Home Content */
+@media only screen and (max-width: 1300px) {
+    .home_content-wrap{
+        /* margin-left: 281px; */
+        width: 74%;
+        
+        }
+}
+@media only screen and (max-width: 1100px) {
+    .home_content-wrap{
+        /* margin-left: 281px; */
+        width: 65%;
+        
+        }
+}
+
+.home_content_top-quoteText{
+position: fixed;
+top: 0;
+}
+
+.home_content_top_interaction-wrap{
+    display: flex;
+    position: fixed;
+    top: 330px;
+}
+
+.home_content_top_interaction-search-wrap{
+    display: flex;
+}
+
+.home_content_top_interaction-newAppointment-wrap{
+    display: flex;
+    cursor: pointer;
+}
+
+/* HOME: WEEKLY DATES FOR APPOINTMENTS */
+
+.appointments_wrap{
+    /* width: 100%; */
+    padding: 20px;
+}
+
+.appointments_weekly_dates-wrap{
+    display: flex;
+    /* width: 100%; */
+    /* justify-content: space-between; */
+    padding: 20px;
+    align-content: center;
+    gap: 20px;
+}
+
+.weekly_date-itm{
+    border: 2px solid #4F6A66;
+    width: 100%;
+    padding: 20px 20px;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

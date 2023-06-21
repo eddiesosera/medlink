@@ -1,6 +1,6 @@
 <?php 
 
-include "../config.php";
+include "config.php";
 $patient = $_POST["patient"];
 $receptionist = $_POST["receptionist"];
 $doctor = $_POST["doctor"];

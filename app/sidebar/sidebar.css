@@ -10,8 +10,8 @@ a{
 .sidebar-container {
     height: 100vh;
     width: fit-content;
-    background: #f1fbfa;
-    border-right: 0.5px solid #99DED5;
+    background: #fbf8ef;
+    border-right: 0.5px solid #eee3c4;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -19,6 +19,8 @@ a{
     padding-left: 20px;
     padding-right: 20px;
     max-height: 97.5vh;
+
+    /* position: fixed; */
 }
 
 /* SIDEBAR TOP SECTION */
@@ -26,7 +28,7 @@ a{
     display: flex;
     flex-direction: column;
     padding: 20px 20px;
-    background: #f9fffe;
+    background: #fffefa;
     gap: 30px;
     border-radius: 20px;
     /* border-bottom: 0.5px solid #99DED5; */
@@ -54,13 +56,13 @@ a{
 #sidebar-top-top-user-name {
     font-size: 16px;
     font-weight: 500;
-    color: #0B423B;
+    color: #453608;
 }
 
 #sidebar-top-top-user-rank {
     font-size: 14px;
     font-weight: 400;
-    color: #7db1aa;
+    color: #958450;
     margin-top: 3px;
 }
 
@@ -106,7 +108,7 @@ a{
     justify-content: flex-start;
     height: 20px;
     padding: 15px 25px;
-    border-radius: 5px;
+    border-radius: 12px;
     background: #0B423B;
     color: #FFF1C6;
     font-family: 'Archivo';
@@ -165,7 +167,7 @@ a{
 .sidebar-btm-container {
     display: flex;
     flex-direction: column;
-    border-top: 0.5px solid #9DE3A2;
+    border-top: 0.5px solid #eee3c4;
     padding: 20px;
 }
 
