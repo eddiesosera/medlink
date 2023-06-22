@@ -18,7 +18,11 @@ echo '<h1>Edit Appointment</h1>';
 
 echo '<form  method="POST">';
 echo '<div>Receptionist</div>';
-echo '<div>'.$_GET['id'].'</div>';
+echo '<div>';
+if(isset($_GET['receptionist'])){
+echo $_GET['receptionist'];
+}
+echo '</div>';
 
 echo '<br/>';
 echo '<br/>';
@@ -28,7 +32,7 @@ echo '<input type="text" value="Patient" />';
 echo '<div>Doctor</div>';
 echo '<input type="text" value="Doctor"/>';
 echo '<div>Date</div>';
-echo '<input type="date" id="appointment_date"/>';
+echo '<input type="date" value="2023-06-06" id="appointment_date"/>';
 
 echo '<div>Time</div>';
 $therapy_time_slots = array("09:00", "10:05", "11:05", "13:00", "14:05", "15:05");

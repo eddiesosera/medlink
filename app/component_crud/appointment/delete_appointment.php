@@ -9,6 +9,6 @@ $sql = "DELETE FROM therapysession where therapySession_id = $id";
 $con -> query($sql);
 $con-> close();
 
-header("location: index.php");
+header("location:"."../../index.php");
 
 ?>
