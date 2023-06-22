@@ -1,19 +1,21 @@
-<?php 
+<?php
 
 include "config.php";
+
 $patient = $_POST["patient"];
 $receptionist = $_POST["receptionist"];
 $doctor = $_POST["doctor"];
 $date = $_POST["date"];
-$session_status = $_POST["session_status"];
-$attendace = $_POST["attendence"];
+$time = $_POST["time"];
+$room = $_POST["room"];
+$attended = $_POST["attended"];
 
 
-$sql = "INSERT INTO therapysession(therapySession_id, receptionist_id, patient_id, doctor_id, session_date, session_status, attended) VALUES ('',$receptionist,$patient,$doctor,$date,$session_status,$attendace)";
+$sql = "INSERT IGNORE INTO `therapySession`(`therapySession_id`, `receptionist_id`, `patient_id`, `doctor_id`, `session_date`, `session_time`, `session_room`, `attended`) 
+VALUES ('','$receptionist','$patient','$doctor','$date','$time','$room','$attended')";
+
 
 $con->query($sql);
-$con->close;
+$con->close();
 
-header("location: ../index.php");
-
-?>
+header("location:" . "../../");
