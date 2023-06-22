@@ -23,7 +23,8 @@ while($appoint=mysqli_fetch_assoc($result)){
         echo '<div>'.$appoint['attended'].'</div>';
 
         echo '<a class="btn btn-danger" href="./appointment_crud/delete_appointment.php?id=' . $appoint['therapySession_id'] . '" role="button">Delete</a>';
-        echo '<a class="btn btn-danger" href="../app/appointments_ui/edit_appointment.php?id=' . $appoint['therapySession_id']."?date=".$appoint['session_date'] . '" role="button">Edit</a>';
+        
+        echo "<a class='appointment_edit_btn' href='../app/appointments_ui/edit_appointment.php?id=$appoint['therapySession_id']?receptionist=$appoint['receptionist_name']?patient=$appoint['patient_name']?doctor=$appoint['name']?date=$appoint['session_date']' role='button'>Edit</a>";
 
 
         echo '</form>';
