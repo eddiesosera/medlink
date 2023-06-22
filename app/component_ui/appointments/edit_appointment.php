@@ -20,43 +20,94 @@ echo '<h1>Edit Appointment</h1>';
 
 echo '<form action="../../component_crud/appointment/update_appointment.php" method="POST">';
 echo '<div>Receptionist</div>';
-echo '<div>';
+echo '<input name="edit_receptionist" type="text" readonly ';
 if(isset($_GET['receptionist'])){
-echo $_GET['receptionist'];
+echo 'value="'.$_GET['receptionist'].'"';
 }
-echo '</div>';
+echo '/>';
 
 echo '<br/>';
 echo '<br/>';
 
-echo '<div>Patient</div>';
-$sql_patient = "select *
+
+// Patient drop down with selected appoinment on select
+echo '<div>Patients</div>';
+$sql_patient = "select *, ptnt.patient_name
 from therapysession session, patient ptnt
 where session.patient_id=ptnt.patient_id";
 
 $result = $con -> query($sql_patient);
 
-echo "<select key='1'>";
-while($row = $result->fetch_assoc()) {
-        echo '<option>'.$row['patient_name'].'</option>';
+echo '<select name="edit_patient" key="">';
+while($patient = $result->fetch_assoc()) {
+        if ($_GET['pat_id'] == $patient['patient_id'])
+        {
+            echo '<option selected value="'.$patient['patient_id'].'">'.$patient['patient_name'].'</option>';
+        }else{
+            echo '<option value="'.$patient['patient_id'].'">'.$patient['patient_name'].'</option>';
+        }
 }
 echo "</select>";
 
-$con -> close();
 
+// Patient drop down with selected appoinment on select
 echo '<div>Doctor</div>';
-echo '<input type="text" value="Doctor"/>';
-echo '<div>Date</div>';
-echo '<input type="date" value="2023-06-06" id="appointment_date"/>';
+$sql_doctor = "select *, dctr.doctor_name
+from therapysession session, doctors dctr
+where session.doctor_id=dctr.doctor_id";
 
+$result_doc = $con -> query($sql_doctor);
+
+echo '<select name="edit_doctor" key="">';
+while($doctor = $result_doc->fetch_assoc()) {
+        if ($_GET['doc_id'] == $doctor['doctor_id'])
+        {
+            echo '<option selected value="'.$doctor['doctor_id'].'">'.$doctor['doctor_name'].'</option>';
+        }else{
+            echo '<option  value="'.$doctor['doctor_id'].'">'.$doctor['doctor_name'].'</option>';
+        }
+}
+echo "</select>";
+
+
+// Date picker with init date
+echo '<div>Date</div>';
+echo '<input type="date" name="edit_date" value="2023-06-06" id="appointment_date"/>';
+
+
+// Time slots
 echo '<div>Time</div>';
+
+$initTime ='09:30';
+
+$sql_time = "select *
+from therapysession session
+where session.session_time=session.session_time";
+
+$result_time = $con -> query($sql_time);
+
 $therapy_time_slots = array("09:00", "10:05", "11:05", "13:00", "14:05", "15:05");
 echo '<select>';
-foreach($therapy_time_slots as $slot){echo "<option>".$slot."</option>";};
+
+if($sessTime = $result_time->fetch_assoc()){
+    for($t = 0; $t <= 5; $t++){
+        if ($_GET['session_time'] == $therapy_time_slots[$t]){
+            echo '<option selected value"'.$therapy_time_slots[$t].'" >'.$therapy_time_slots[$t].'</option>';
+        }else{
+        echo '<option value"'.$therapy_time_slots[$t].'" >'.$therapy_time_slots[$t].'</option>';
+        }
+    };
+}
+
 echo '</select>';
 
 echo '<br/>';
 echo '<br/>';
+
+
+
+
+
 
 echo '<div>Room</div>';
 $therapy_rooms = array("A1", "A2", "B1", "B2");
@@ -71,8 +122,10 @@ echo '<select > <option>Attended</option> <option selected>Pending</option> <opt
 echo '<br/>';
 echo '<br/>';
 
+$con -> close();
+
 echo '<div>';
-echo '<a href="../../component_crud/appointment/update_appointment.php?id='.$_GET['receptionist'].'"'.'><button>Save changes</button></a>';
+echo '<button role"button" type="submit">Save changes</button>';
 echo '<a href="../index.php"><button id="cancelBtn_edit-appointment">Cancel</button></a>';
 echo '</div>';
 
