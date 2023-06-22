@@ -14,9 +14,11 @@
     <div class='editAppointment_wrap'>
         <?php
 
+        include 'config.php';
+
 echo '<h1>Edit Appointment</h1>';
 
-echo '<form  method="POST">';
+echo '<form action="../../component_crud/appointment/update_appointment.php" method="POST">';
 echo '<div>Receptionist</div>';
 echo '<div>';
 if(isset($_GET['receptionist'])){
@@ -28,7 +30,20 @@ echo '<br/>';
 echo '<br/>';
 
 echo '<div>Patient</div>';
-echo '<input type="text" value="Patient" />';
+$sql_patient = "select *
+from therapysession session, patient ptnt
+where session.patient_id=ptnt.patient_id";
+
+$result = $con -> query($sql_patient);
+
+echo "<select key='1'>";
+while($row = $result->fetch_assoc()) {
+        echo '<option>'.$row['patient_name'].'</option>';
+}
+echo "</select>";
+
+$con -> close();
+
 echo '<div>Doctor</div>';
 echo '<input type="text" value="Doctor"/>';
 echo '<div>Date</div>';
@@ -57,7 +72,7 @@ echo '<br/>';
 echo '<br/>';
 
 echo '<div>';
-echo '<button>Save changes</button>';
+echo '<a href="../../component_crud/appointment/update_appointment.php?id='.$_GET['receptionist'].'"'.'><button>Save changes</button></a>';
 echo '<a href="../index.php"><button id="cancelBtn_edit-appointment">Cancel</button></a>';
 echo '</div>';
 

@@ -96,8 +96,7 @@
     function changeActivePage() {
 
         // Activate or Deactivate HOME Page on Navbar based on pathname
-        if (window.location.pathname === '/DV200_Term2_Receptionist-Dashboard/Term-2/app/' ||
-            '/DV200_Term2_Receptionist-Dashboard/Term-2/app/index.php') {
+        if (window.location.pathname === '/DV200_Term2_Receptionist-Dashboard/Term-2/app/') {
             document.getElementById("sidebar-mid-homeWrap").classList.add('active-sidebar-wrap');
             document.getElementById("sidebar-mid-home-icon").classList.add('active-sidebar-icon');
             document.getElementById("sidebar-mid-homeWrap").classList.remove('inactive-sidebar-wrap');

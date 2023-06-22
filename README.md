@@ -35,3 +35,5 @@ The dashboard can complete most required functionalities suchh as... The only ex
 
 #### Additional Feature(s)
 * Filter and Sort Function
+* Warning Popup
+
