@@ -3,7 +3,7 @@ body{
 }
 .home_content-wrap{
 /* margin-left: 281px; */
-position: fixed;
+position: absolute;
 width: 80%;
 right: 20px;
 
@@ -38,13 +38,13 @@ height: 350px;
 }
 
 .home_content_top-quoteText{
-position: fixed;
+position: absolute;
 top: 0;
 }
 
 .home_content_top_interaction-wrap{
     display: flex;
-    position: fixed;
+    position: absolute;
     top: 330px;
 }
 

@@ -24,11 +24,11 @@
                     <i class="ri-search-2-line"></i>
                     <input type="search" placeholder="Search session details" />
                 </div>
-                <a href="appointments_ui/new_appointment.php">
-                    <div class="home_content_top_interaction-newAppointment-wrap">
+                <a href="component_ui/appointments/new_appointment.php">
+                    <button class="home_content_top_interaction-newAppointment-wrap">
                         <i class="ri-add-line home_content_top_interaction-newAppointment-icon"></i>
                         <div class="home_content_top_interaction-newAppointment-text">Appointment</div>
-                    </div>
+                    </button>
                 </a>
             </div>
         </div>
@@ -52,7 +52,7 @@
             <div class="appointments_items-wrap">
                 <?php
 
-                include "appointment_crud/read_appointment.php"; 
+                include "component_crud/appointment/read_appointment.php"; 
 
                 ?>
             </div>

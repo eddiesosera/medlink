@@ -20,7 +20,7 @@ a{
     padding-right: 20px;
     max-height: 97.5vh;
 
-    /* position: fixed; */
+    position: fixed;
 }
 
 /* SIDEBAR TOP SECTION */
@@ -64,6 +64,12 @@ a{
     font-weight: 400;
     color: #958450;
     margin-top: 3px;
+}
+
+.sidebar-top-top-btmBtn-wrap{
+display: flex;
+flex-direction: column;
+gap: 15px;
 }
 
 #sidebar-top-top-btmBtn {
