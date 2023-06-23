@@ -49,6 +49,21 @@ where ptnt.patient_id=ptnt.patient_id and ptnt.patient_medicalAid_id=medAid.medi
 
         echo '</div>';
 
+
+        // URL variable declaration sent to edit page
+        $btn_class = "patient_edit_btn";
+        $edit_href_begin = "../app/component_ui/appointments/edit_appointment.php";
+        $edit_href_id = "?id=" . urlencode($patient['patient_id']);
+        $edit_href_rec = "&receptionist=" . urldecode($patient['patient_name']);;
+
+        // URL variable sent to Appointment Edit page
+        echo '<a class="' . $btn_class . '"';
+        echo 'href="' . $edit_href_begin . $edit_href_id . $edit_href_rec;
+        echo '"> Edit </a>';
+
+        echo '<a class="btn btn-danger" href="./component_crud/patient/delete_patient.php?id=' . $patient['patient_id'] . '" role="button">Delete</a>';
+
+
         echo '</li>';
     }
     echo '</ul>';
