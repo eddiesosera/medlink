@@ -28,14 +28,16 @@
         Patients
       </div>
       <div class="patients_top_wrap_r_interact_wrap">
-        <a href="">
+        <a href="component_ui/appointments/new_appointment.php">
           <button class="top_secondary_btn patients_top_wrap_r_interact_wrap_newAppointment">
             New Appointment
           </button>
         </a>
-        <button class="top_primary_btn patients_top_wrap_r_interact_wrap_newPatient">
-          Add New Patient
-        </button>
+        <a href="component_ui/patients/new_patient.php">
+          <button class="top_primary_btn patients_top_wrap_r_interact_wrap_newPatient">
+            Add New Patient
+          </button>
+        </a>
       </div>
     </div>
 

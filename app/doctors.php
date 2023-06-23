@@ -27,9 +27,11 @@
         Doctors
       </div>
       <div class="doctors_top_wrap_r_interact_wrap">
-        <button class="top_secondary_btn doctors_top_wrap_r_interact_wrap_newAppointment">
-          New Appointment
-        </button>
+        <a href="component_ui/appointments/new_appointment.php">
+          <button class="top_secondary_btn doctors_top_wrap_r_interact_wrap_newAppointment">
+            New Appointment
+          </button>
+        </a>
         <button class="top_primary_btn doctors_top_wrap_r_interact_wrap_newDoctor">
           Add New Doctor
         </button>
