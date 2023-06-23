@@ -1,0 +1,50 @@
+ .patients_wrap, .doctors_wrap{
+display: flex;
+flex-direction: column;
+}
+
+.patients_top_wrap, .doctors_top_wrap{
+    display: flex;
+    justify-content: space-between;
+align-items: center;
+width: 100%;
+}
+
+.patients_top_wrap_l_heading, .doctors_top_wrap_l_heading{
+    font-size: 24px;
+}
+
+.patients_top_wrap_r_interact_wrap, .doctors_top_wrap_r_interact_wrap{
+display: flex;
+gap: 10px;
+}
+
+.top_primary_btn .patients_top_wrap_r_interact_wrap_newPatient, .doctors_top_wrap_r_interact_wrap_newPatient{
+
+}
+
+.top_secondary_btn , .patients_top_wrap_r_interact_wrap_newAppointment, .doctors_top_wrap_r_interact_wrap_newAppointment{
+background: none;
+}
+
+.hr_midbody{
+
+}
+
+.patients_body_wrap, .doctors_body_wrap{
+display: flex;
+flex-direction: row;
+margin-top: 50px;
+}
+
+.patients_body_wrap_inner{
+    margin-right: 50px;
+}
+
+.patients_body_l_wrap_view, .doctors_body_l_wrap_view{
+
+}
+
+.patients_body_wrap_r_list, .doctorss_body_wrap_r_list{
+
+}

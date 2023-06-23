@@ -1,3 +1,25 @@
 body{
     display: flex;
 }
+
+.patients_wrap, .doctors_wrap{
+    position: absolute;
+    right:20px;
+    width: 80%;
+}
+
+/* Responsive Home Content */
+@media only screen and (max-width: 1300px) {
+    .home_content-wrap, .patients_wrap, .doctors_wrap{
+        /* margin-left: 281px; */
+        width: 74%;
+        
+        }
+}
+@media only screen and (max-width: 1100px) {
+    .home_content-wrap, .patients_wrap, .doctors_wrap{
+        /* margin-left: 281px; */
+        width: 65%;
+        
+        }
+}
