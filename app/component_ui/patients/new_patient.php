@@ -19,9 +19,9 @@
 
 
         <input type="text" name="name" placeholder="Name" />
-        echo '<input type="text" name="surname" placeholder="Surname" />
-        echo '<input type="number" name="id_no" placeholder="ID Number" />
-        echo '<input type="number" name="age" placeholder="Age" />
+        <input type="text" name="surname" placeholder="Surname" />
+        <input type="number" name="id_no" placeholder="ID Number" />
+        <input type="number" name="age" placeholder="Age" />
 
         <select required name="gender">
             <option value="F">Gender</option>
@@ -35,9 +35,8 @@
 
         // Illness type from DB dropdown
         $sql_illness = "select *
-    from illness_types 
-    ORDER BY `illness_id` ASC
-   ";
+        from illness_types 
+        ORDER BY `illness_id` ASC";
 
         $result_illness = $con->query($sql_illness);
 
@@ -51,9 +50,8 @@
 
         // Medical Aid from DB dropdown
         $sql_medAid = "select *
-    from medical_aid 
-    ORDER BY `medicalAid_id` ASC
-   ";
+        from medical_aid 
+        ORDER BY `medicalAid_id` ASC";
 
         $result_medAid = $con->query($sql_medAid);
 
@@ -75,7 +73,7 @@
 
         ?>
 
-        <a href="../../component_crud/patient/create_patient.php"><button type="submit">Save changes</button></a>
+        <button type="submit">Add Patient</button>
         <a href="../index.php"><button id="cancelBtn_edit-appointment">Cancel</button></a>';
 
 

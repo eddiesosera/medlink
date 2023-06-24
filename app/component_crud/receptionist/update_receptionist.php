@@ -12,10 +12,9 @@ if (isset($_POST['edit_receptionist_btn'])) {
     $folder = '../../img/';
 
     move_uploaded_file($tmp_img_name, $folder . $img_name);
-
-    // echo 'Image Uploaded';
 }
 
+// IMAGE VALIDATION
 // Validating if image is selected
 if ($_FILES['edit_receptionist_image']['name'] !== '') {
     $img = $_FILES['edit_receptionist_image']['name'];
@@ -28,10 +27,7 @@ if ($_FILES['edit_receptionist_image']['name'] !== '') {
 
     if ($receptionist = $result_img->fetch_assoc()) {
 
-        echo 'i work';
-        print_r($_FILES['edit_receptionist_image']['name']);
-
-        // Set image to old image if no new upload
+        // Set image to existing/current image if no new upload
         if ($_SESSION['id'] == $receptionist['receptionist_id']) {
             $img = $receptionist['receptionist_profile_url'];
         }

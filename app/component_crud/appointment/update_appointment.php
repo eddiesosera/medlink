@@ -3,7 +3,6 @@
 include "config.php";
 
 
-
 $id = $_POST["id"];
 $patient = $_POST["edit_patient"];
 $receptionist = $_POST["edit_receptionist"];
