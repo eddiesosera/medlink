@@ -15,7 +15,7 @@
     Add New Patient
 
 
-    <form action="../../component_crud/patient/create_patient.php" method="POST">
+    <form action="../../component_crud/patient/create_patient.php" method="POST" enctype="multipart/form-data">
 
 
         <input type="text" name="name" placeholder="Name" />

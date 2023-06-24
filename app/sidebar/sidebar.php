@@ -23,9 +23,13 @@
                 </div>
             </div>
             <div class="sidebar-top-top-btmBtn-wrap">
-                <button id="sidebar-top-top-btmBtn">
-                    <div id="sidebar-top-top-btmBtn-txt">Account Settings</div>
-                </button>
+
+                <!-- Edit logged in account of Receptionist -->
+                <a href="component_ui/receptionist/edit_receptionist.php">
+                    <button id="sidebar-top-top-btmBtn">
+                        <div id="sidebar-top-top-btmBtn-txt">Account Settings</div>
+                    </button>
+                </a>
                 <button id="sidebar-top-top-btmBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="sidebar-top-top-btmBtn-icon">
                         <path fill="none" d="M0 0h24v24H0z"></path>

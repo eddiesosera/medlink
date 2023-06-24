@@ -17,6 +17,9 @@
 
   <!-- Sidebar init -->
   <?php
+
+  session_start();
+
   include './sidebar/sidebar.php';
   ?>
 

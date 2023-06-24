@@ -53,12 +53,13 @@ if (isset($_POST['receptionist_email_login']) && isset($_POST['receptionist_pass
                 $_SESSION['rank_title'] = $row['rank_title'];
                 $_SESSION['email'] = $row['receptionist_email'];
                 $_SESSION['name'] = $row['receptionist_name'];
-                $_SESSION['surname'] = $row['receptionist_name'];
+                $_SESSION['surname'] = $row['receptionist_surname'];
                 $_SESSION['profile'] = $row['receptionist_profile_url'];
                 $_SESSION['age'] = $row['receptionist_age'];
                 $_SESSION['gender'] = $row['receptionist_gender'];
                 $_SESSION['email'] = $row['receptionist_email'];
                 $_SESSION['phone_number'] = $row['receptionist_phone_number'];
+                $_SESSION['password'] = $row['receptionist_password'];
                 $_SESSION['status'] = 'Logged In';
                 header("location: ../");
                 exit();
