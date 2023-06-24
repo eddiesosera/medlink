@@ -4,6 +4,7 @@ include "config.php";
 
 session_start();
 
+// If submit button pressed, move selected image to the appropriate folder
 if (isset($_POST['edit_receptionist_btn'])) {
 
     $img_name = $_FILES['edit_receptionist_image']['name'];
@@ -12,7 +13,29 @@ if (isset($_POST['edit_receptionist_btn'])) {
 
     move_uploaded_file($tmp_img_name, $folder . $img_name);
 
-    echo 'Image Uploaded';
+    // echo 'Image Uploaded';
+}
+
+// Validating if image is selected
+if ($_FILES['edit_receptionist_image']['name'] !== '') {
+    $img = $_FILES['edit_receptionist_image']['name'];
+    echo 'Image Successfully Uploaded';
+} else {
+    $sql_receptionist = "select *
+        from receptionist rcptn, receptionist_rank rcptn_rnk";
+
+    $result_img = $con->query($sql_receptionist);
+
+    if ($receptionist = $result_img->fetch_assoc()) {
+
+        echo 'i work';
+        print_r($_FILES['edit_receptionist_image']['name']);
+
+        // Set image to old image if no new upload
+        if ($_SESSION['id'] == $receptionist['receptionist_id']) {
+            $img = $receptionist['receptionist_profile_url'];
+        }
+    }
 }
 
 $id = $_SESSION['id'];
@@ -22,7 +45,6 @@ $gender = $_SESSION["gender"];
 
 $name = $_POST["edit_receptionist_name"];
 $surname = $_POST["edit_receptionist_surname"];
-$img = $_FILES['edit_receptionist_image']['name'];
 $phone_number = $_POST["edit_receptionist_phone_number"];
 $email = $_POST["edit_receptionist_email"];
 $password = $_POST["edit_receptionist_password"];
