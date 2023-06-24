@@ -13,20 +13,41 @@
 
 <body>
 
-    <form id="edit_receptionist_wrap" action="../../component_crud/receptionist/update_receptionist.php" method="post">
+    <form id="edit_receptionist_wrap" action="../../component_crud/receptionist/update_receptionist.php" method="post" enctype="multipart/form-data">
 
         <?php
 
         session_start();
-        echo '<img id="image" src="' . $_SESSION['profile'] . '" alt="Receptionist Image"/>';
-        echo '<input type="text" value="' . $_SESSION['name'] . '" name="edit_receptionist_name"/>';
-        echo '<input type="text" value="' . $_SESSION['surname'] . '" name="edit_receptionist_surname"/>';
-        echo '<input type="file" name="edit_receptionist_image"/>';
-        echo '<input type="text" value="' . $_SESSION['email'] . '" name="edit_receptionist_email"/>';
-        echo '<input type="text" value="' . "+27" . $_SESSION['phone_number'] . '" name="edit_receptionist_number"/>';
-        echo '<input type="password" id="myInput" value="' . $_SESSION['password'] . '" name="edit_receptionist_password"/>';
-        echo '<input type="checkbox" onclick="myFunction()">Show Password';
 
+        include "config.php";
+
+        $sql_receptionist = "select *
+        from receptionist rcptn, receptionist_rank rcptn_rnk
+        where rcptn.receptionist_rank_id=rcptn_rnk.rank_id";
+
+        $result = $con->query($sql_receptionist);
+
+        $sql_receptionist = "select *
+        from receptionist rcptn, receptionist_rank rcptn_rnk
+        where rcptn.receptionist_rank_id=rcptn_rnk.rank_id";
+
+        $result = $con->query($sql_receptionist);
+
+        while ($receptionist = $result->fetch_assoc()) {
+            if ($_SESSION['id'] == $receptionist['receptionist_id']) {
+
+                echo '<img id="image" src="' . $receptionist['receptionist_profile_url'] . '" alt="Receptionist Image"/>';
+                echo '<input type="text" value="' . $receptionist['receptionist_name'] . '" name="edit_receptionist_name"/>';
+                echo '<input type="text" value="' . $receptionist['receptionist_surname'] . '" name="edit_receptionist_surname"/>';
+                echo '<input type="file" value="' . $receptionist['receptionist_profile_url'] . '" name="edit_receptionist_image"/>';
+                echo '<input type="text" value="' . $_SESSION['email'] . '" name="edit_receptionist_email"/>';
+                echo '<input type="text" value="' . "+27" . $receptionist['receptionist_phone_number'] . '" name="edit_receptionist_phone_number"/>';
+                echo '<input type="password" id="myInput" value="' . $receptionist['receptionist_password'] . '" name="edit_receptionist_password"/>';
+                echo '<input type="checkbox" onclick="myFunction()">Show Password';
+            }
+        }
+
+        $con->close();
 
         ?>
 
