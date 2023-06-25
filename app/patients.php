@@ -2,21 +2,21 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Medlink: Patients</title>
-  <style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medlink: Patients</title>
+    <style>
     <?php include 'index.css';
     include './style/patients_doctors.css';
     ?>
-  </style>
+    </style>
 </head>
 
 <body>
 
-  <!-- Sidebar init -->
-  <?php
+    <!-- Sidebar init -->
+    <?php
 
   session_start();
 
@@ -25,35 +25,35 @@
   include 'config.php';
   ?>
 
-  <!-- Patients Content -->
-  <div class="patients_wrap">
-    <div class="patients_top_wrap">
-      <div class="patients_top_wrap_l_heading">
-        Patients
-      </div>
-      <div class="patients_top_wrap_r_interact_wrap">
-        <a href="component_ui/appointments/new_appointment.php">
-          <button class="top_secondary_btn patients_top_wrap_r_interact_wrap_newAppointment">
-            New Appointment
-          </button>
-        </a>
-        <a href="component_ui/patients/new_patient.php">
-          <button class="top_primary_btn patients_top_wrap_r_interact_wrap_newPatient">
-            Add New Patient
-          </button>
-        </a>
-      </div>
-    </div>
+    <!-- Patients Content -->
+    <div class="patients_wrap">
+        <div class="patients_top_wrap">
+            <div class="patients_top_wrap_l_heading">
+                Patients
+            </div>
+            <div class="patients_top_wrap_r_interact_wrap">
+                <a href="component_ui/appointments/new_appointment.php">
+                    <button class="top_secondary_btn patients_top_wrap_r_interact_wrap_newAppointment">
+                        New Appointment
+                    </button>
+                </a>
+                <a href="component_ui/patients/new_patient.php">
+                    <button class="top_primary_btn patients_top_wrap_r_interact_wrap_newPatient">
+                        Add New Patient
+                    </button>
+                </a>
+            </div>
+        </div>
 
-    <hr class="hr_midbody" />
+        <hr class="hr_midbody" />
 
 
-    <div class="patients_body_wrap">
+        <div class="patients_body_wrap">
 
-      <!-- Left card displaying patients  -->
-      <div class="patients_body_wrap_inner">
+            <!-- Left card displaying patients  -->
+            <div class="patients_body_wrap_inner">
 
-        <?php
+                <?php
 
         echo '<div class="patients_body_l_wrap_view">';
         echo  '<div class="patients_body_l_top">';
@@ -93,11 +93,11 @@
 
         ?>
 
-      </div>
+            </div>
 
 
-      <!-- List formart of Patients -->
-      <?php
+            <!-- List formart of Patients -->
+            <?php
       echo '<div class="patients_body_wrap_r_list">';
       echo  '<div class="patients_body_wrap_r_list_top">';
       echo    '<form class="patients_body_wrap_r_list_top_l_interactive">';
@@ -107,20 +107,18 @@
       echo  '</div>';
       echo  '<div class="patients_body_wrap_r_list_bttm">';
 
-      $aaaaace = 5555;
-
       include 'component_crud/patient/read_patient.php';
 
       echo '</div>';
 
       ?>
 
+        </div>
+
     </div>
 
-  </div>
 
-
-  </div>
+    </div>
 
 
 </body>

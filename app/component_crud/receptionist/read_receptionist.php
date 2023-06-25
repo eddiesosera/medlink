@@ -15,7 +15,7 @@ while ($receptionist = $result->fetch_assoc()) {
 
     // if ($_SESSION['id'] == $receptionist['receptionist_id']) {
     echo '<li class="receptionist_itmHead">';
-    echo '<img style="height:50px;" class="receptionist_itm_img" src="../../img/' . $receptionist['receptionist_profile_url'] . '"/>';
+    echo '<img style="height:50px;" class="receptionist_itm_img" src="../../img/receptionists/' . $receptionist['receptionist_profile_url'] . '"/>';
     echo '<div class="receptionist_itm_name">' . $receptionist['receptionist_name'] . " " . $receptionist['receptionist_surname'] . '</div>';
     echo '<div class="receptionist_itm_rank">' . $receptionist['rank_title'] . '</div>';
     echo '<div class="receptionist_itm_gender">' . $receptionist['receptionist_gender'] . '</div>';
