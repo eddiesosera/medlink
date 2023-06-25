@@ -17,7 +17,7 @@
             <img class="home_content_top-imgbg" src="img/assets/background_banner2.jpg" alt="Quote Image Background" />
             <div class="home_content_top-quoteText">
                 <p class="quoteText">
-                    It always seems impossible until it’s done. You’ve got this Pamela.
+                    It always seems impossible until it’s done. You’ve got this Katty.
                 </p>
             </div>
             <div class="home_content_top_interaction-wrap">
