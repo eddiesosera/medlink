@@ -1,5 +1,6 @@
 body{
     font-family: 'Archivo';
+    background: #F5F0E4;
 }
 .home_content-wrap{
 /* margin-left: 281px; */
@@ -41,28 +42,89 @@ height: 350px;
 .home_content_top-quoteText{
 position: absolute;
 top: 0;
+font-size: 36px;
+color: #F6F2E6;
+height: 350px;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+}
+
+.quoteText{
+width: 50%;
+text-align: center;
 }
 
 .home_content_top_interaction-wrap{
     display: flex;
     position: absolute;
-    top: 330px;
+    top: 325px;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
 }
 
 .home_content_top_interaction-search-wrap{
     display: flex;
+    background: #FCFBF7;
+    height: 45px;
+    border-radius: 10px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #C3D8D1;
+    width: fit-content;
+    max-width: 40%;
+}
+
+.searchIcon{
+    font-size: 24px;
+    color: #1B2423;
+}
+
+#searchInput{
+    outline: none;
+    stroke: none;
+    border: none;
+    margin-left: 10px;
+    font-family: Archivo;
+    font-size: 14px;
+    font-weight: 400;
+    width: 20vw;
 }
 
 .home_content_top_interaction-newAppointment-wrap{
     display: flex;
     cursor: pointer;
+    background: #0C1413;
+    border-radius: 10px;
+    height: 45px;
+    border: 1px solid #F5E9E4;
+    color: #B1EDE3;
+    padding: 0 20px;
+    align-items: center;
 }
+
+.addBtn{
+    font-size: 20px;
+}
+
+.home_content_top_interaction-newAppointment-text{
+    font-size: 14px;
+    margin-left: 10px;
+}
+
 
 /* HOME: WEEKLY DATES FOR APPOINTMENTS */
 
 .appointments_wrap{
     /* width: 100%; */
     padding: 20px;
+    background: #fbf8ef;
+    margin-top: 40px;
+    border-radius: 20px 20px 0 0;
+    border: 0.5px solid #eee3c4;
 }
 
 .appointments_weekly_dates-wrap{
@@ -75,12 +137,69 @@ top: 0;
 }
 
 .weekly_date-itm{
-    border: 2px solid #4F6A66;
+    border: 0.5px solid #4F6A66;
     width: 100%;
     padding: 20px 20px;
     border-radius: 12px;
 
+    color:  #4F6A66;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.selected_weekly_date-itm0{
+    color: #E6F6F4;
+    background-color: #1B2423 !important;
+    color: #E6F6F4 !important;
+    border: none !important;
+}
+
+.dates-day{
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.dates{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.appoinment_itemWrap{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+}
+
+.appoinment_item{
+background: #f2f0e8;
+padding: 40px;
+border-radius: 15px;
+}
+
+.appoinment_item_inner{
+display: flex;
+justify-content: space-between;
+}
+
+.secondary_btn_dngr{
+    border:0.5px solid #da2825; 
+    padding:10px;
+    border-radius:8px;
+    color:#da2825;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.secondary_btn_actn{
+    border:0.5px solid #168371; 
+    padding:10px;
+    border-radius:8px;
+    color:#168371;
+    font-size: 14px;
+    font-weight: 500;
 }

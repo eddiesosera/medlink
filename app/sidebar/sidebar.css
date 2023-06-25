@@ -31,6 +31,7 @@ a{
     background: #fffefa;
     gap: 30px;
     border-radius: 20px;
+    border: 0.5px solid #eee3c4;
     /* border-bottom: 0.5px solid #99DED5; */
 }
 
