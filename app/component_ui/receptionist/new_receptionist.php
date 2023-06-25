@@ -17,6 +17,10 @@
 
         session_start();
 
+        if (isset($_GET['error'])) {
+            echo '<div class="login_error_display">' . $_GET['error'] . '</div>';
+        }
+
         echo '<input onchange="readURL(event)" id="new_UploadImg" type="file" name="new_receptionist_image"/>';
         echo '<img id="image" style="height:200px" alt="Receptionist Image"/>';
 
@@ -39,7 +43,7 @@
         echo ' <option value="Male">Male</option>';
         echo '</select>';
 
-        echo '<input type="password" required placeholder="Password" id="myInput" name="new_receptionist_password"/>';
+        echo '<input type="password"  placeholder="Password" id="myInput" name="new_receptionist_password"/>';
 
         ?>
 
