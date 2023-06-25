@@ -1,3 +1,9 @@
+<?php
+include 'config.php';
+
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,10 +25,9 @@
 <body>
 
 
-
     <div class="manageAccess_wrap">
         <div class="manageAccess_topWrap">
-            <div style="color: black; font-size: 36px; font-family: Archivo; font-weight: 600;">
+            <div style="color: #1b2423; font-size: 36px; font-family: Archivo; font-weight: 600;">
                 Receptionists
             </div>
             <a href="new_receptionist.php">
@@ -34,10 +39,6 @@
         <div class="receptionist_List_wrap">
 
             <?php
-
-            include 'config.php';
-
-            session_start();
 
             if ($_SESSION['rank_id'] === "1") {
 

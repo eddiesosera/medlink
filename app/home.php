@@ -28,7 +28,7 @@
                 <a href="component_ui/appointments/new_appointment.php">
                     <button class="home_content_top_interaction-newAppointment-wrap">
                         <i class="addBtn ri-add-line home_content_top_interaction-newAppointment-icon"></i>
-                        <div class="home_content_top_interaction-newAppointment-text">Appointment</div>
+                        <div class="home_content_top_interaction-newAppointment-text">New Appointment</div>
                     </button>
                 </a>
             </div>
