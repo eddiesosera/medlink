@@ -25,9 +25,10 @@ while ($appoint = mysqli_fetch_assoc($result)) {
         echo '<li class="appoinment_item">';
         echo '<form class="appoinment_item_inner" class="form-inline m-2" action="update.php" method="POST">';
 
-        echo '<div class"appointment_session_time" style="border:0.5px solid #1B2423;color:#1B2423; padding:10px;border-radius:8px" >' . $appoint['session_time'] . '</div>';
-        // echo '<div>' . $appoint['session_date'] . '</div>';
         $app_itm_each = "display:flex;align-items: center;";
+        $app_itm_time = "border:0.5px solid #1B2423;color:#1B2423; padding:10px;border-radius:8px; font-weight:600;";
+        echo '<div class"appointment_session_time" style="' . $app_itm_time . '" >' . $appoint['session_time'] . '</div>';
+        // echo '<div>' . $appoint['session_date'] . '</div>';
         echo '<div style="' . $app_itm_each . '" class"appointment_patient_wrap">' . $appoint['patient_name'] . " " . $appoint['patient_surname'] . '</div>';
         echo '<div style="' . $app_itm_each . '" class"appointment_doctor_wrap">' . "Dr. " . $appoint['doctor_surname'] . " " . substr(trim($appoint['doctor_name']), 0, 1)  . '</div>';
         echo '<div style="' . $app_itm_each . '" class"appointment_receptionist_wrap">' . $appoint['receptionist_surname'] . " " . substr(trim($appoint['receptionist_name']), 0, 1) . '</div>';
