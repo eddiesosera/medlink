@@ -65,6 +65,12 @@
         echo '<div class="patientItm_phone">' . $patient['medicalAid_organization'] . '</div>';
         echo '</div>';
 
+        // echo '<div class="patientItm_col">';
+        // echo '<div class="patientItm_detailWrap">';
+        // echo '<div class="Patient_col_label">Phone Number</div>';
+        // echo '<div class="patientItm_phone">' . $patient['patient_phone_number'] . '</div>';
+        // echo '</div>';
+
         echo '</div>';
 
         // URL variable sent to Appointment Edit page
