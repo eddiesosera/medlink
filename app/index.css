@@ -4,8 +4,8 @@ body{
 
 .patients_wrap, .doctors_wrap{
     position: absolute;
-    right:20px;
-    width: 80%;
+    right:40px;
+    width: 77%;
 }
 
 /* Responsive Home Content */

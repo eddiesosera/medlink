@@ -51,6 +51,7 @@ while ($appoint = mysqli_fetch_assoc($result)) {
         $edit_href_room = "&session_room=" . urldecode($appoint['session_room']);
         $edit_href_attnd = "&attended=" . urldecode($appoint['attended']);
 
+        echo '<div class="appoinment_btn_wrap">';
         // URL variable sent to Appointment Edit page
         echo '<a style="' . $app_itm_each . '" class="secondary_btn_actn ' . $btn_class . '"';
         echo 'href="' . $edit_href_begin . $edit_href_id . $edit_href_rec . $edit_href_rec_id . $edit_href_doc . $edit_href_doc_id . $edit_href_pat . $edit_href_pat_id;
@@ -58,7 +59,7 @@ while ($appoint = mysqli_fetch_assoc($result)) {
         echo '"' . '>Edit</a>';
 
         echo '<a style="' . $app_itm_each . '" class="secondary_btn_dngr btn-danger" href="./component_crud/appointment/delete_appointment.php?id=' . $appoint['therapySession_id'] . '" role="button">Delete</a>';
-
+        echo '</div>';
 
         echo '</form>';
         echo "</li>";

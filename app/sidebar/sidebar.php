@@ -80,7 +80,7 @@
                 <div class="active-sidebar-text" id="sidebar-mid-home-txt">Home</div>
             </div>
         </a>
-        <a href="/DV200_Term2_Receptionist-Dashboard/Term-2/app/patients.php">
+        <a href="/DV200_Term2_Receptionist-Dashboard/Term-2/app/patients.php?id=1">
             <div class="inactive-sidebar-wrap" id="sidebar-mid-patientWrap">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="inactive-sidebar-icon"
                     id="sidebar-mid-patient-icon">

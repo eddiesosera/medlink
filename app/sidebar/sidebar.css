@@ -29,8 +29,8 @@ a{
     flex-direction: column;
     padding: 20px 20px;
     background: #fffefa;
-    gap: 30px;
-    border-radius: 20px;
+    gap: 20px;
+    border-radius: 10px;
     border: 0.5px solid #eee3c4;
     /* border-bottom: 0.5px solid #99DED5; */
 }
@@ -70,7 +70,7 @@ a{
 .sidebar-top-top-btmBtn-wrap{
 display: flex;
 flex-direction: column;
-gap: 15px;
+gap: 10px;
 }
 
 #sidebar-top-top-btmBtn {
@@ -186,14 +186,14 @@ gap: 15px;
     padding: 15px 25px;
     border-radius: 12px;
     background: none;
-    color: #264228;
+    color: #da2825;
     font-family: 'Archivo';
     cursor: pointer;
     border: none;
 }
 
 #sidebar-btm-logout-icon {
-    fill: #264228;
+    fill: #da2825;
     height: 16px;
 }
 

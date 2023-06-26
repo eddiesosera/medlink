@@ -97,11 +97,11 @@ text-align: center;
 .home_content_top_interaction-newAppointment-wrap{
     display: flex;
     cursor: pointer;
-    background: #0C1413;
+    background: #1b2423;
     border-radius: 10px;
     height: 45px;
     border: 1px solid #F5E9E4;
-    color: #B1EDE3;
+    color: #FFF1C6;
     padding: 0 20px;
     align-items: center;
 }
@@ -133,7 +133,7 @@ text-align: center;
     /* justify-content: space-between; */
     padding: 20px;
     align-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .weekly_date-itm{
@@ -151,8 +151,8 @@ text-align: center;
 
 .selected_weekly_date-itm0{
     color: #E6F6F4;
-    background-color: #1B2423 !important;
-    color: #E6F6F4 !important;
+    background-color: #1b2423 !important;
+    color: #FFF1C6 !important;
     border: none !important;
 }
 
@@ -169,9 +169,9 @@ text-align: center;
 .appoinment_itemWrap{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     list-style-type: none;
-    padding: 20px;
+    padding: 10px 20px;
     margin: 0;
 }
 
@@ -184,6 +184,11 @@ border-radius: 15px;
 .appoinment_item_inner{
 display: flex;
 justify-content: space-between;
+}
+
+.appoinment_btn_wrap{
+    display: flex;
+    gap: 20px;
 }
 
 .secondary_btn_dngr{

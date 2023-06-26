@@ -26,10 +26,10 @@ if (isset($_POST['receptionist_email_login']) && isset($_POST['receptionist_pass
 
     // If the input value (on login page) is empty create a variable on the URL that hints potential problems.
     if (empty($email)) {
-        header("location: login.php?error=Email adress is required");
+        header("location: login.php?error=Email adress is required.");
         exit();
     } else if (empty($password)) {
-        header("location: login.php?error=Password is required");
+        header("location: login.php?error=Password is required.");
         exit();
     }
 
@@ -64,14 +64,14 @@ if (isset($_POST['receptionist_email_login']) && isset($_POST['receptionist_pass
                 header("location: ../");
                 exit();
             } else {
-                header("location: login.php?error=Incorrect username or password");
+                header("location: login.php?error=Incorrect username or password, Try again.");
                 exit();
             }
         }
 
         // If the database does not return anything then your credentials do match those in thr DB, therefore try again
         else {
-            header("location: login.php?error=Incorrect username or password");
+            header("location: login.php?error=Incorrect username or password, Try again.");
             exit();
         }
     }
