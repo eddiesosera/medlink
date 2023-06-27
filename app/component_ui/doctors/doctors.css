@@ -1,39 +1,39 @@
 body{
     background: #F5F0E4;
-    font-family: Archivo;
+    font-family: 'Archivo';
 }
 
-.newAppointment_wrap, .editAppointment_wrap{
+/* NEW PATIENT */
+
+.new_patient_wrap{
     display: flex;
     flex-direction: column;
-    width: 30%;
     margin: 0 auto;
+    width: min-content;
     margin-top: 40px;
 }
 
-.form_head{
+.new_patient_head{
     font-size: 36px;
     font-weight: 600;
 }
 
-.form_wrap{
-    padding: 40px;
+.new_patient_form_wrap{
     background: #fffefa;
-    display: flex;
     border: 0.5px solid #eee3c4;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 15px;
-    width: 100%;
-
+    border-radius: 20px;
     margin-top: 40px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
+
 
 input{
     padding: 12px;
     border-radius: 8px;
     border: 0.5px solid #d9d4c4;
-    width: 100%;
 }
 
 input:-internal-autofill-selected {
@@ -44,16 +44,10 @@ select{
     border-radius: 8px;
     border: 0.5px solid #d9d4c4;
 
-    width: 100%;
-
     font-family: Archivo !important;
 }
 
-.receptionist, .hide{
-    display: none;
-}
-
-.form_group_Section{
+.form_group_section{
     display: flex;
     gap: 10px;
 }
@@ -70,5 +64,9 @@ select{
     font-size: 16px;
     font-weight: 500 !important;
     margin-top: 20px;
+    width: 100%;
+}
+
+.new_patient_medicalAid, .dropdown{
     width: 100%;
 }

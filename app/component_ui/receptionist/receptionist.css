@@ -110,18 +110,20 @@ body{
     width: fit-content;
     margin: 0 auto;
     padding: 20px;
+    width: 30%;
 }
 
 .new_receptionist_inforWrap{
     background: #fffefa;
     border: 0.5px solid #eee3c4;
     border-radius: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 40px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     /* align-items: center; */
+    width: fit-content;
 }
 
 .new_receptionist_profile_wrap{
@@ -132,6 +134,7 @@ body{
 
 #new_UploadImg{
 margin: 0 auto;
+width: -webkit-fill-available;
 }
 
 #new_receptionist_image{
@@ -147,6 +150,7 @@ input{
     padding: 12px;
     border-radius: 8px;
     border: 0.5px solid #d9d4c4;
+    /* width: 100%; */
 }
 
 input:-internal-autofill-selected {
@@ -156,6 +160,7 @@ select{
     padding: 12px;
     border-radius: 8px;
     border: 0.5px solid #d9d4c4;
+    width: 100%;
 
     font-family: Archivo !important;
 }

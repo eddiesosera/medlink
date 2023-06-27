@@ -4,7 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Appointment</title>
+    <title>Edit Appointment</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <style>
+    <?php include 'appointments.css'
+    ?>
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    </style>
+
 </head>
 
 <body>
@@ -18,27 +31,22 @@
 
         echo '<h1>Edit Appointment</h1>';
 
-        echo '<form action="../../component_crud/appointment/update_appointment.php?id=' . $_GET['id'] . '" method="POST">';
+        echo '<form class="form_wrap" action="../../component_crud/appointment/update_appointment.php?id=' . $_GET['id'] . '" method="POST">';
 
-        echo '<input name="id" type="text" readonly ';
+        echo '<input class="hide" name="id" type="text" readonly ';
         if (isset($_GET['id'])) {
             echo 'value="' . $_GET['id'] . '"';
         }
         echo '/>';
 
-        echo '<div>Receptionist</div>';
-        echo '<input name="edit_receptionist" type="text" readonly ';
+        echo '<input class="hide" name="edit_receptionist" type="text" readonly ';
         if (isset($_GET['receptionist'])) {
             echo 'value="' . $_GET['rec_id'] . '"';
         }
         echo '/>';
 
-        echo '<br/>';
-        echo '<br/>';
 
-
-        // Patient drop down with selected appoinment on select
-        echo '<div>Patients</div>';
+        // Patient drop down with selected appoinment on selec
         $sql_patient = "select *, ptnt.patient_name
         from therapysession session, patient ptnt
         where session.patient_id=ptnt.patient_id";
@@ -57,7 +65,6 @@
 
 
         // Patient drop down with selected appoinment on select
-        echo '<div>Doctor</div>';
         $sql_doctor = "select *, dctr.doctor_name
         from therapysession session, doctors dctr
         where session.doctor_id=dctr.doctor_id";
@@ -76,13 +83,11 @@
 
 
         // Date picker with init date
-        echo '<div>Date</div>';
+        echo '<div class="form_group_Section">';
         echo '<input type="date" name="edit_date" value="2023-06-06" id="appointment_date"/>';
 
 
         // Time slots
-        echo '<div>Time</div>';
-
         $sql_time = "select *
         from therapysession session
         where session.session_time=session.session_time";
@@ -103,24 +108,17 @@
         }
 
         echo '</select>';
-
-        echo '<br/>';
-        echo '<br/>';
-
-
-
-
+        echo '</div>';
 
         // Session Room
-        echo '<div>Room</div>';
-
         $sql_room = "select *
         from therapysession session
         where session.session_room=session.session_room";
 
         $result_room = $con->query($sql_time);
-
         $therapy_rooms = array("A1", "A2", "B1", "B2", "C1", "C2");
+
+        echo '<div class="form_group_Section">';
         echo '<select name="edit_session_room">';
 
         if ($sessRoom = $result_room->fetch_assoc()) {
@@ -135,12 +133,7 @@
 
         echo '</select>';
 
-
-
-
         // Attendence status
-        echo '<div>Attendance</div>';
-
         $sql_attended = "select *
         from therapysession session
         where session.attended=session.attended";
@@ -161,16 +154,9 @@
         }
 
         echo '</select>';
-
-        echo '<br/>';
-        echo '<br/>';
-
-
-
-        echo '<div>';
-        echo '<a href="../../index.php?id=' . $_GET["id"] . '"  role="button"><button role="button">Save changes</button><a/>';
-        echo '<a href="../index.php"><button id="cancelBtn_edit-appointment">Cancel</button></a>';
         echo '</div>';
+
+        echo '<button class="primary_btn" role="button">Save changes</button>';
 
         $con->close();
 

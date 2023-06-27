@@ -237,6 +237,13 @@ width: -webkit-fill-available;
     background: none;
 }
 
+.patients_body_l_bttm{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: max-content;
+}
+
 /* SELECTED PATIENT */
 
 .selected_patient_img{
