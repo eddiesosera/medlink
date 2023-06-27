@@ -14,7 +14,7 @@
 
         <div class='newAppointment_wrap'>
 
-            <h1>Edit Appointment</h1>
+            <h1>New Appointment</h1>
 
             <form action="../../component_crud/appointment/create_appointment.php" method="POST">
 
@@ -119,9 +119,9 @@
     <script type="text/javascript">
         const createAppoint = document.getElementById("create_appointment_btn");
 
-        addEventListener("submit", (e) => {
-            alert('Created')
-        })
+        // addEventListener("submit", (e) => {
+        //     alert('Created')
+        // })
     </script>
 
 </body>

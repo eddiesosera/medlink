@@ -1,0 +1,72 @@
+body{
+    background: #F5F0E4;
+    font-family: 'Archivo';
+}
+
+/* NEW PATIENT */
+
+.new_patient_wrap{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: min-content;
+    margin-top: 40px;
+}
+
+.new_patient_head{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.new_patient_form_wrap{
+    background: #fffefa;
+    border: 0.5px solid #eee3c4;
+    border-radius: 20px;
+    margin-top: 40px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+input{
+    padding: 12px;
+    border-radius: 8px;
+    border: 0.5px solid #d9d4c4;
+}
+
+input:-internal-autofill-selected {
+background-color: #f8e8b9;
+}
+select{
+    padding: 12px;
+    border-radius: 8px;
+    border: 0.5px solid #d9d4c4;
+
+    font-family: Archivo !important;
+}
+
+.form_group_section{
+    display: flex;
+    gap: 10px;
+}
+
+.primary_btn{
+    width: fit-content; 
+    height: 40px; 
+    padding: 0 15px;
+    background: #1b2423;
+    color: #FFF1C6;
+    border: none;
+    border-radius: 10px; 
+    font-family: Archivo;
+    font-size: 16px;
+    font-weight: 500 !important;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.new_patient_medicalAid, .dropdown{
+    width: 100%;
+}

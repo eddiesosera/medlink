@@ -16,9 +16,11 @@
         <div class="home_content_top-wrap">
             <img class="home_content_top-imgbg" src="img/assets/background_banner2.jpg" alt="Quote Image Background" />
             <div class="home_content_top-quoteText">
-                <p class="quoteText">
-                    It always seems impossible until it’s done. You’ve got this Katty.
-                </p>
+                <?php
+                echo '<p class="quoteText">';
+                echo 'It always seems impossible until it’s done. You’ve got this ' . $_SESSION['name'] . '!';
+                echo '</p>';
+                ?>
             </div>
             <div class="home_content_top_interaction-wrap">
                 <div class="home_content_top_interaction-search-wrap">

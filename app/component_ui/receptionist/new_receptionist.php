@@ -34,7 +34,7 @@ if (isset($_GET['error'])) {
     <form id="edit_receptionist_wrap" action="../../component_crud/receptionist/create_receptionist.php" method="post"
         enctype="multipart/form-data">
 
-        <h1>Add New Receptionist</h1>
+        <h1>New Receptionist</h1>
 
         <div class="new_receptionist_inforWrap">
 

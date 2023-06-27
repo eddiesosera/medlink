@@ -106,7 +106,7 @@ include "config.php";
                         echo '<div class="selected_patients_body_l_mid_itm">';
                         echo  '<div class="selected_patients_label">Medical Condition</div>';
                         echo   '<div class="patients_body_l_mid_spec_contact_illness">' . $slct_patient['illness_title'] . '</div>';
-                        echo   '<div class="selected_patients_label">Medical</div>';
+                        echo   '<div class="selected_patients_label">Medical Aid</div>';
                         echo   '<div class="patients_body_l_mid_spec_contact_mdclAid">' . $slct_patient['medicalAid_organization'] . '</div>';
                         echo '</div>';
                         echo  '<div class="selected_patients_body_l_mid_itm">';

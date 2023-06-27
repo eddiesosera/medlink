@@ -241,7 +241,7 @@ width: -webkit-fill-available;
 
 .selected_patient_img{
     width: 100%;
-    height: 140px;
+    height: 150px;
     border-radius: 3px;
     object-fit: cover;
 }
