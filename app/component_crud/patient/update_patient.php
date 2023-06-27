@@ -35,7 +35,7 @@ if ($_FILES['edit_patient_image']['name'] !== '') {
 }
 
 
-$id = $_POST['id'];
+$id = $_GET['pat_id'];
 $medicalAid = $_POST['edit_patient_medicalAid_id'];
 $illness = $_POST["edit_patient_illness"];
 
@@ -67,4 +67,4 @@ WHERE
 
 $result = $con->query($sql);
 $con->close();
-header('location:' . '../../patient.php?selected_id=' . $id);
+header('location:' . '../../patients.php?selected_id=' . $id);

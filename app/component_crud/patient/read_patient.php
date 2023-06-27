@@ -31,7 +31,7 @@
         $btn_class = "patient_edit_btn";
         $edit_href_begin = "../app/component_ui/patients/edit_patient.php";
         $edit_href_id = "?pat_id=" . urlencode($patient['patient_id']);
-        $edit_ill_id = "?ill_id=" . urlencode($patient['illness_id']);
+        $edit_ill_id = "&ill_id=" . urlencode($patient['illness_id']);
 
 
         echo '<li class="patients_body_wrap_r_list_patientItm" key="' . $patient['patient_id'] . '">';

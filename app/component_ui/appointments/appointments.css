@@ -1,0 +1,43 @@
+body{
+    background: #F5F0E4;
+    font-family: Archivo;
+}
+
+.newAppointment_wrap{
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    margin: 0 auto;
+}
+
+.form_head{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.form_wrap{
+    padding: 40px;
+    background: #fffefa;
+    border: 0.5px solid #eee3c4;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+input{
+    padding: 12px;
+    border-radius: 8px;
+    border: 0.5px solid #d9d4c4;
+}
+
+input:-internal-autofill-selected {
+background-color: #f8e8b9;
+}
+select{
+    padding: 12px;
+    border-radius: 8px;
+    border: 0.5px solid #d9d4c4;
+
+    font-family: Archivo !important;
+}
