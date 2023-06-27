@@ -17,7 +17,8 @@
     $query = "
     select patient.*, medical_aid.*, illness_types.*
     from patient , medical_aid , illness_types
-    where patient.patient_medicalAid_id=medical_aid.medicalAid_id and patient.patient_illnesType_id=illness_types.illness_id";
+    where patient.patient_medicalAid_id=medical_aid.medicalAid_id and patient.patient_illnesType_id=illness_types.illness_id
+    order by patient_name";
 
 
 
@@ -28,9 +29,10 @@
 
         // URL variable declaration sent to edit page
         $btn_class = "patient_edit_btn";
-        $edit_href_begin = "../app/component_ui/appointments/edit_appointment.php";
-        $edit_href_id = "?id=" . urlencode($patient['patient_id']);
-        $edit_href_rec = "&receptionist=" . urldecode($patient['patient_name']);
+        $edit_href_begin = "../app/component_ui/patients/edit_patient.php";
+        $edit_href_id = "?pat_id=" . urlencode($patient['patient_id']);
+        $edit_ill_id = "?ill_id=" . urlencode($patient['illness_id']);
+
 
         echo '<li class="patients_body_wrap_r_list_patientItm" key="' . $patient['patient_id'] . '">';
 
@@ -65,18 +67,12 @@
         echo '<div class="patientItm_phone">' . $patient['medicalAid_organization'] . '</div>';
         echo '</div>';
 
-        // echo '<div class="patientItm_col">';
-        // echo '<div class="patientItm_detailWrap">';
-        // echo '<div class="Patient_col_label">Phone Number</div>';
-        // echo '<div class="patientItm_phone">' . $patient['patient_phone_number'] . '</div>';
-        // echo '</div>';
-
         echo '</div>';
 
         // URL variable sent to Appointment Edit page
         echo '<div class="patient_btn_wrap">';
         echo '<a class="' . $btn_class . '"';
-        echo 'href="' . $edit_href_begin . $edit_href_id . $edit_href_rec;
+        echo 'href="' . $edit_href_begin . $edit_href_id . $edit_ill_id;
         echo '"><button class="secondary_btn"> Edit </button></a>';
 
         echo '<a class="btn btn-danger" href="./component_crud/patient/delete_patient.php?id=' . $patient['patient_id'] . '" role="button"><button class="secondary_btn_dngr">Delete</button></a>';

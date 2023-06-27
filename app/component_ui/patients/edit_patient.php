@@ -28,35 +28,53 @@
             Edit Patient
         </div>
 
-        <form class="new_patient_form_wrap" action="../../component_crud/patient/create_patient.php" method="POST"
+        <form class="new_patient_form_wrap" action="../../component_crud/patient/edit_patient.php" method="POST"
             enctype="multipart/form-data">
 
-            <input type="file" name="image" placeholder="Upload" />
-
-            <div class="form_group_section">
-                <input type="text" name="name" placeholder="Name" />
-                <input type="text" name="surname" placeholder="Surname" />
-            </div>
-
+            <!-- Name and Surname -->
             <?php
 
-            // Medical Aid + Conditions from DB
             include 'config.php';
 
+            $sql_patient_def = "select *
+            from patient";
+
+            $result_ptnt = $con->query($sql_patient_def);
+
+
+            echo '<input type="file" name="edit_patient_image" placeholder="Upload" />';
+
+            while ($ptnt =  $result_ptnt->fetch_assoc()) {
+                if ($_GET['pat_id'] === $ptnt['patient_id']) {
+                    echo '<div class="form_group_section">';
+                    echo '<input type="text" value="' . $ptnt['patient_name'] . '" name="edit_patient_name" placeholder="Name" />';
+                    echo '<input type="text" value="' . $ptnt['patient_surname'] . '" name="edit_patient_surname" placeholder="Surname" />';
+                    echo '</div>';
+                }
+            }
+
+            // Medical Aid + Conditions from DB
             // Illness type from DB dropdown
             $sql_illness = "select *
-            from illness_types 
-            ORDER BY `illness_id` ASC";
+            from illness_types ";
 
             $result_illness = $con->query($sql_illness);
 
             echo '<div class="form_group_section">';
             echo '<select class="new_patient_illness dropdown" required name="illness" key="">';
-            echo '<option value="">Reason for Treatment:</option>';
+            echo '<option value="">Medical Condition</option>';
             while ($illn = $result_illness->fetch_assoc()) {
-                echo '<option value="' . $illn['illness_id'] . '">' . ucfirst($illn['illness_title']) . '</option>';
+
+                echo '<option ';
+                if (isset($_GET['ill_id'])) {
+                    if ($illn['illness_id'] === $_GET['ill_id']) {
+                        echo 'selected';
+                    }
+                }
+                echo ' value="' . $illn['illness_id'] . '" >' . ucfirst($illn['illness_title']) . '</option>';
             }
             echo "</select>";
+
 
             // Medical Aid from DB dropdown
             $sql_medAid = "select *
@@ -65,7 +83,7 @@
 
             $result_medAid = $con->query($sql_medAid);
 
-            echo '<select class="new_patient_medicalAid dropdown" required name="medical_aid" key="">';
+            echo '<select class="new_patient_medicalAid dropdown" required name="edit_patient_medicalAid_id" key="">';
             echo '<option value="">Medical Aid</option>';
             while ($medAid = $result_medAid->fetch_assoc()) {
                 echo '<option value="' . $medAid['medicalAid_id'] . '">' . ucfirst($medAid['medicalAid_organization']) . '</option>';
@@ -78,15 +96,15 @@
             ?>
 
             <div class="form_group_section">
-                <input type="number" name="phone_number" placeholder="Phone number" />
-                <input type="email" name="email" placeholder="Email" />
+                <input type="number" name="edit_patient_phone_number" placeholder="Phone number" />
+                <input type="email" name="edit_patient_email" placeholder="Email" />
             </div>
 
-            <input type="number" name="id_no" placeholder="ID Number" />
+            <input type="number" name="edit_patient_gov_id" placeholder="ID Number" />
 
             <div class="form_group_section">
-                <input class="dropdown" type="date" name="age" placeholder="Age" />
-                <select class="dropdown" required name="gender">
+                <input class="dropdown" type="date" name="edit_patient_age" placeholder="Age" />
+                <select class="dropdown" required name="edit_patient_gender">
                     <option value="F">Gender</option>
                     <option value="Female">Female</option>
                     <option value="Male">Male</option>
