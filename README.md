@@ -1,4 +1,4 @@
-# Medlink by Eddie Sosera
+# MedLink by Eddie Sosera
  > A dashboard designed for receptionists at a therapy clinic.
 
 ## Project Background
