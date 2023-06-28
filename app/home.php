@@ -23,10 +23,11 @@
                 ?>
             </div>
             <div class="home_content_top_interaction-wrap">
-                <div class="home_content_top_interaction-search-wrap">
+                <form class="home_content_top_interaction-search-wrap" action="POST">
                     <i class="searchIcon ri-search-2-line"></i>
-                    <input id="searchInput" type="search" placeholder="Search session details" />
-                </div>
+                    <input id="searchInput" type="search" name="search_appointment"
+                        placeholder="Search session details" />
+                </form>
                 <a href="component_ui/appointments/new_appointment.php">
                     <button class="home_content_top_interaction-newAppointment-wrap">
                         <i class="addBtn ri-add-line home_content_top_interaction-newAppointment-icon"></i>

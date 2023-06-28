@@ -44,7 +44,7 @@ include "config.php";
                         New Appointment
                     </button>
                 </a>
-                <a href="component_ui/patients/new_doctor.php">
+                <a href="component_ui/doctors/new_doctor.php">
                     <button class="top_primary_btn patients_top_wrap_r_interact_wrap_newPatient">
                         New Doctor
                     </button>
@@ -69,7 +69,7 @@ include "config.php";
                 <div class="patients_body_wrap_r_list_bttm">
 
                     <?php
-          include 'component_crud/patient/read_patient.php';
+          include 'component_crud/doctor/read_doctor.php';
           ?>
 
                 </div>
@@ -78,51 +78,49 @@ include "config.php";
 
             <!-- Left card displaying patients  -->
 
-
             <?php
-      $query_slct_patient = "
-                select patient.*, medical_aid.*, illness_types.*
-                from patient, medical_aid , illness_types 
-                where patient.patient_medicalAid_id=medical_aid.medicalAid_id and patient.patient_illnesType_id=illness_types.illness_id";
+      $query_slct_doctor = "
+      select doctors.*, illness_types.*
+      from doctors , illness_types
+      where doctors.doctor_speciality_id=illness_types.illness_id
+      order by doctor_name";
 
-      $result = mysqli_query($con, $query_slct_patient);
+      $result = mysqli_query($con, $query_slct_doctor);
 
       if (isset($_GET['selected_id'])) {
 
         echo '<div class="patients_body_wrap_inner">';
 
-        while ($slct_patient = mysqli_fetch_assoc($result)) {
+        while ($slct_doctor = mysqli_fetch_assoc($result)) {
 
-          if ($_GET['selected_id'] == $slct_patient['patient_id']) {
+          if ($_GET['selected_id'] == $slct_doctor['doctor_id']) {
 
             echo '<div class="patients_body_l_wrap_view">';
             echo '<div class="patients_body_l_top">';
-            echo '<img class="selected_patient_img" src="img/patients/' . $slct_patient['patient_profile_url'] . '"alt="Patient Profile Image" />';
+            echo '<img class="selected_patient_img" src="img/doctors/' . $slct_doctor['doctor_profile_url'] . '"alt="Patient Profile Image" />';
             echo '</div>';
             echo '<div class="selected_patients_info_wrap">';
             echo '<div class="selected_patients_body_l_mid_itm">';
-            echo '<div class="patients_body_l_mid_fname"><b>' . $slct_patient['patient_name'] . " " . $slct_patient['patient_surname'] . '</b></div>';
-            echo '<div class="patients_body_l_mid_govId">' . "#" . $slct_patient['patient_gov_id'] . '</div>';
+            echo '<div class="patients_body_l_mid_fname"><b>' . $slct_doctor['doctor_name'] . " " . $slct_doctor['doctor_surname'] . '</b></div>';
+            echo '<div class="patients_body_l_mid_govId">' . "#" . $slct_doctor['doctor_gov_id'] . '</div>';
             echo '</div>';
             echo '<div class="selected_patients_body_l_mid_itm">';
-            echo  '<div class="selected_patients_label">Medical Condition</div>';
-            echo   '<div class="patients_body_l_mid_spec_contact_illness">' . $slct_patient['illness_title'] . '</div>';
-            echo   '<div class="selected_patients_label">Medical Aid</div>';
-            echo   '<div class="patients_body_l_mid_spec_contact_mdclAid">' . $slct_patient['medicalAid_organization'] . '</div>';
+            echo  '<div class="selected_patients_label">Speciality</div>';
+            echo   '<div class="patients_body_l_mid_spec_contact_illness">' . $slct_doctor['illness_title'] . '</div>';
             echo '</div>';
             echo  '<div class="selected_patients_body_l_mid_itm">';
             echo     '<div class="selected_patients_label">Phone Number</div>';
-            echo      '<div class="patients_body_l_mid_contact_nmbr">' . "+27" . $slct_patient['patient_phone_number'] . '</div>';
+            echo      '<div class="patients_body_l_mid_contact_nmbr">' . "+27" . $slct_doctor['doctor_phone_number'] . '</div>';
             echo       '<div class="selected_patients_label">Email adress</div>';
-            echo        '<div class="patients_body_l_mid_contact_email">' . $slct_patient['patient_email'] . '</div>';
+            echo        '<div class="patients_body_l_mid_contact_email">' . $slct_doctor['doctor_email'] . '</div>';
             echo    '</div>';
 
             echo   ' <div class="selected_patients_body_l_mid_itm">';
             echo        '<div class="patients_body_l_mid_2_extra">';
             echo            '<div class="selected_patients_label">Gender</div>';
-            echo            '<div class="patients_body_l_mid_2_extra_gender">' . $slct_patient['patient_gender'] . '</div>';
+            echo            '<div class="patients_body_l_mid_2_extra_gender">' . $slct_doctor['doctor_gender'] . '</div>';
             echo            '<div class="selected_patients_label">Date of Birth</div>';
-            echo            '<div class="patients_body_l_mid_2_extra_age">' . $slct_patient['patient_age'] . '</div>';
+            echo            '<div class="patients_body_l_mid_2_extra_age">' . $slct_doctor['doctor_age'] . '</div>';
             echo        '</div>';
             echo    '</div>';
             echo '</div>';

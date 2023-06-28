@@ -10,7 +10,7 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
     <style>
-    <?php include 'patients.css'
+    <?php include 'doctors.css'
     ?>
     </style>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
@@ -28,7 +28,7 @@
             New Doctor
         </div>
 
-        <form class="new_patient_form_wrap" action="../../component_crud/patient/create_patient.php" method="POST"
+        <form class="new_patient_form_wrap" action="../../component_crud/doctor/create_doctor.php" method="POST"
             enctype="multipart/form-data">
 
             <input type="file" name="image" placeholder="Upload" />
@@ -50,28 +50,12 @@
 
             $result_illness = $con->query($sql_illness);
 
-            echo '<div class="form_group_section">';
             echo '<select class="new_patient_illness dropdown" required name="illness" key="">';
-            echo '<option value="">Medical Condition</option>';
+            echo '<option value="">Speciality</option>';
             while ($illn = $result_illness->fetch_assoc()) {
                 echo '<option value="' . $illn['illness_id'] . '">' . ucfirst($illn['illness_title']) . '</option>';
             }
             echo "</select>";
-
-            // Medical Aid from DB dropdown
-            $sql_medAid = "select *
-            from medical_aid 
-            ORDER BY `medicalAid_id` ASC";
-
-            $result_medAid = $con->query($sql_medAid);
-
-            echo '<select class="new_patient_medicalAid dropdown" required name="medical_aid" key="">';
-            echo '<option value="">Medical Aid</option>';
-            while ($medAid = $result_medAid->fetch_assoc()) {
-                echo '<option value="' . $medAid['medicalAid_id'] . '">' . ucfirst($medAid['medicalAid_organization']) . '</option>';
-            }
-            echo "</select>";
-            echo '</div>';
 
             $con->close();
 
@@ -87,14 +71,14 @@
             <div class="form_group_section">
                 <input class="dropdown" type="date" name="age" placeholder="Age" />
                 <select class="dropdown" required name="gender">
-                    <option value="F">Gender</option>
+                    <option value="">Gender</option>
                     <option value="Female">Female</option>
                     <option value="Male">Male</option>
                 </select>
             </div>
 
-            <button class="primary_btn" name="new_patient_btn" type="submit">Add Patient</button>
-            <!-- <a href="../index.php"><button id="cancelBtn_edit-appointment">Cancel</button></a> -->
+            <button class="primary_btn" name="new_doctor_btn" type="submit">Add Doctor</button>
+
 
         </form>
 

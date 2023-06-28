@@ -7,9 +7,9 @@ session_start();
 // If submit button pressed, move selected image to the appropriate folder
 if (isset($_POST['edit_receptionist_btn'])) {
 
-    $img_name = $_FILES['edit_receptionist_image']['name'];
-    $tmp_img_name = $_FILES['edit_receptionist_image']['tmp_name'];
-    $folder = '../../img/receptionists/';
+    $img_name = $_FILES['edit_patient_image']['name'];
+    $tmp_img_name = $_FILES['edit_patient_image']['tmp_name'];
+    $folder = '../../img/patients/';
 
     move_uploaded_file($tmp_img_name, $folder . $img_name);
 }
