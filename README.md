@@ -10,12 +10,12 @@
 
 
 ## Build Status
-The dashboard can complete most required functionalities suchh as... The only exceptions are .... 
+The dashboard can complete most required functionalities assigned in the brief.There are minor user experience issues not attended to, however the dashboard completes most features.
 
 ## Preview
-[Home Page](C:\xampp\htdocs\DV200_Term2_Receptionist-Dashboard\Term-2\app\img\wip.png)
-[Doctors Page Page](C:\xampp\htdocs\DV200_Term2_Receptionist-Dashboard\Term-2\app\img\wip.png)
-[Receptionist's Page](C:\xampp\htdocs\DV200_Term2_Receptionist-Dashboard\Term-2\app\img\wip.png)
+[Home Page](app\img\screenshots\appoinments_home.png)
+[Doctors Page Page](app\img\screenshots\doctors.png)
+[Patieny's Page](app\img\screenshots\patients.png)
 
 ## Tech/Framework used
 
@@ -33,7 +33,5 @@ The dashboard can complete most required functionalities suchh as... The only ex
 * Login and Register capability
 * Add Images
 
-#### Additional Feature(s)
-* Filter and Sort Function
-* Warning Popup
+
 
