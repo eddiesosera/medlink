@@ -13,7 +13,7 @@
 The dashboard can complete most required functionalities assigned in the brief.There are minor user experience issues not attended to, however the dashboard completes most features.
 
 ## Preview
-[Home Page](app/img/screenshots/appointments_home.png)
+[Home Page](https://github.com/eddiesosera/DV200_Term2_Dashboard/blob/main/app/img/screenshots/appointments_home.png)
 [Doctors Page Page](app/img/screenshots/doctors.png)
 [Patient's Page](app/img/screenshots/patients.png)
 
