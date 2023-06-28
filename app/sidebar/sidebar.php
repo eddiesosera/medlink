@@ -68,17 +68,20 @@
         </div>
     </div>
     <div class="sidebar-mid-container">
-        <a href="/DV200_Term2_Receptionist-Dashboard/Term-2/app/">
-            <div class="active-sidebar-wrap" id="sidebar-mid-homeWrap">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="active-sidebar-icon"
-                    id="sidebar-mid-home-icon">
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path
-                        d="M20 20.0001C20 20.5524 19.5523 21.0001 19 21.0001H5C4.44772 21.0001 4 20.5524 4 20.0001V11.0001L1 11.0001L11.3273 1.61162C11.7087 1.26488 12.2913 1.26488 12.6727 1.61162L23 11.0001L20 11.0001V20.0001ZM7.5 13.0001C7.5 15.4854 9.51472 17.5001 12 17.5001C14.4853 17.5001 16.5 15.4854 16.5 13.0001H14.5C14.5 14.3808 13.3807 15.5001 12 15.5001C10.6193 15.5001 9.5 14.3808 9.5 13.0001H7.5Z">
-                    </path>
-                </svg>
-                <div class="active-sidebar-text" id="sidebar-mid-home-txt">Appointments</div>
-            </div>
+        <?php
+        // Route to appoinments of today
+        echo '<a href="/DV200_Term2_Receptionist-Dashboard/Term-2/app/index.php?date=' . date("D-d-M") . '"s >';
+        ?>
+        <div class="active-sidebar-wrap" id="sidebar-mid-homeWrap">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="active-sidebar-icon"
+                id="sidebar-mid-home-icon">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                    d="M20 20.0001C20 20.5524 19.5523 21.0001 19 21.0001H5C4.44772 21.0001 4 20.5524 4 20.0001V11.0001L1 11.0001L11.3273 1.61162C11.7087 1.26488 12.2913 1.26488 12.6727 1.61162L23 11.0001L20 11.0001V20.0001ZM7.5 13.0001C7.5 15.4854 9.51472 17.5001 12 17.5001C14.4853 17.5001 16.5 15.4854 16.5 13.0001H14.5C14.5 14.3808 13.3807 15.5001 12 15.5001C10.6193 15.5001 9.5 14.3808 9.5 13.0001H7.5Z">
+                </path>
+            </svg>
+            <div class="active-sidebar-text" id="sidebar-mid-home-txt">Appointments</div>
+        </div>
         </a>
         <a href="/DV200_Term2_Receptionist-Dashboard/Term-2/app/patients.php?id=1">
             <div class="inactive-sidebar-wrap" id="sidebar-mid-patientWrap">
@@ -127,7 +130,7 @@
     function changeActivePage() {
 
         // Activate or Deactivate HOME Page on Navbar based on pathname
-        if (window.location.pathname === '/DV200_Term2_Receptionist-Dashboard/Term-2/app/') {
+        if (window.location.pathname === '/DV200_Term2_Receptionist-Dashboard/Term-2/app/index.php') {
             document.getElementById("sidebar-mid-homeWrap").classList.add('active-sidebar-wrap');
             document.getElementById("sidebar-mid-home-icon").classList.add('active-sidebar-icon');
             document.getElementById("sidebar-mid-homeWrap").classList.remove('inactive-sidebar-wrap');

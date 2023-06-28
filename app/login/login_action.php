@@ -61,7 +61,7 @@ if (isset($_POST['receptionist_email_login']) && isset($_POST['receptionist_pass
                 $_SESSION['phone_number'] = $row['receptionist_phone_number'];
                 $_SESSION['password'] = $row['receptionist_password'];
                 $_SESSION['status'] = 'Logged In';
-                header("location: ../");
+                header('location: ../index.php?date=' . date('D-d-M'));
                 exit();
             } else {
                 header("location: login.php?error=Incorrect username or password, Try again.");

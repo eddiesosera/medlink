@@ -69,7 +69,7 @@
 
                 echo '<div class="form_group_Section">';
                 // Date picker with init date
-                echo '<input type="date" name="date" value="today" id="appointment_date"/>';
+                echo '<input type="date" value="Today" name="date"  id="appointment_date"/>';
 
                 // Time slots
 

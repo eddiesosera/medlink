@@ -14,6 +14,9 @@ include "config.php";
 
 echo '<ul class="appoinment_itemWrap">';
 
+$slctd_date = $_GET['date'];
+
+
 $query = "
 select session.*, dctr.doctor_name, dctr.doctor_surname, recptn.receptionist_name,recptn.receptionist_surname, ptnt.patient_name, ptnt.patient_surname
 from therapysession session, doctors dctr, receptionist recptn, patient ptnt

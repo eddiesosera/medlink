@@ -38,20 +38,32 @@
         </div>
 
         <div class="appointments_wrap">
-            <div class="appointments_weekly_dates-wrap">
+            <form class="appointments_weekly_dates-wrap">
                 <?php
 
 
                 for ($x = 0; $x <= 6; $x++) {
-                    echo "<div class='weekly_date-itm  selected_weekly_date-itm$x' id='selected_weekly_date weekly_date-itm$x'>";
                     $startdate = strtotime(" $x days");
+                    $slctd_date = date("D-d-M", $startdate);
+
+                    // Route dates. Default date is today
+
+                    echo '<a href="index.php?date=' . date("D-d-M", $startdate);
+                    if ($_GET['date'] == $slctd_date) {
+                        echo '" type="submit" class="weekly_date-itm  selected_weekly_date-itm' . '" id="selected_weekly_date weekly_date-itm';
+                    } else {
+                        echo '" type="submit" class="weekly_date-itm" id="weekly_date-itm';
+                    }
+
+                    echo '$x"' . '>';
+
                     echo "<div class='dates-day' id='date-day$x'>" . date("D", $startdate) . "</div>";
                     echo "<div class='dates' id='date$x'>" . date("M d", $startdate) . "</div>";
-                    echo "</div>";
+                    echo "</a>";
                 }
 
                 ?>
-            </div>
+            </form>
 
             <div class="appointments_items-wrap">
                 <?php
@@ -71,7 +83,7 @@
 
         async function wave(e) {
             // alert(e.target.id)
-            document.querySelector("#date" + i).innerHTML = "YOU CLICKED ME!" + i;
+            // document.querySelector("#date" + i).innerHTML = "YOU CLICKED ME!" + i;
         }
     }
     </script>

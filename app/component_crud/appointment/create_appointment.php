@@ -18,4 +18,4 @@ VALUES ('','$receptionist','$patient','$doctor','$date','$time','$room','$attend
 $con->query($sql);
 $con->close();
 
-header("location:" . "../../");
+header('location:../../index.php?date=' . date('D-d-M'));

@@ -63,7 +63,7 @@ WHERE receptionist_id=$id";
 
 $result = $con->query($sql);
 $con->close();
-header("location:" . "../../");
+header('location:../../index.php?date=' . date('D-d-M'));
 
 // $_SESSION['id'] = $row['receptionist_id'];
 // $_SESSION['rank_id'] = $row['receptionist_rank_id'];

@@ -24,33 +24,32 @@ session_start();
 
 <body>
 
+    <?php
 
-    <div class="manageAccess_wrap">
-        <div class="manageAccess_topWrap">
-            <div style="color: #1b2423; font-size: 36px; font-family: Archivo; font-weight: 600;">
-                Receptionists
-            </div>
-            <a href="new_receptionist.php">
-                <button class="primary_btn">
-                    New Receptionist
-                </button>
-            </a>
-        </div>
-        <div class="receptionist_List_wrap">
+    if ($_SESSION['rank_id'] === "1") {
 
-            <?php
+        echo '<div class="manageAccess_wrap">';
+        echo     '<div class="manageAccess_topWrap">';
+        echo         '<div style="color: #1b2423; font-size: 36px; font-family: Archivo; font-weight: 600;">';
+        echo             'Receptionists';
+        echo         '</div>';
+        echo         '<a href="new_receptionist.php">';
+        echo            ' <button class="primary_btn">';
+        echo                 'New Receptionist';
+        echo             '</button>';
+        echo         '</a>';
+        echo     '</div>';
+        echo     '<div class="receptionist_List_wrap">';
 
-            if ($_SESSION['rank_id'] === "1") {
+        include '../../component_crud/receptionist/read_receptionist.php';
 
-                include '../../component_crud/receptionist/read_receptionist.php';
-
-                echo '</div>';
-                echo '</div>';
-            } else {
-                echo '<div class="error_permission">Permission Required</div>';
-                print_r(isset($_SESSION['rank_id']));
-            }
-            ?>
+        echo '</div>';
+        echo '</div>';
+    } else {
+        echo '<div class="error_permission">Permission Required</div>';
+        // print_r(isset($_SESSION['rank_id']));
+    }
+    ?>
 
 </body>
 

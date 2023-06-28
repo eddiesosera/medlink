@@ -84,7 +84,16 @@
 
         // Date picker with init date
         echo '<div class="form_group_Section">';
-        echo '<input type="date" name="edit_date" value="2023-06-06" id="appointment_date"/>';
+
+        $date = $_GET['id'];
+        $sql_date = "select *
+        from therapysession session
+        where session.therapySession_id=$date";
+
+        $result_date = $con->query($sql_date);
+        while ($date = $result_date->fetch_assoc()) {
+            echo '<input type="date" name="edit_date" value="' . $date['session_date'] . '" id="appointment_date"/>';
+        }
 
 
         // Time slots
