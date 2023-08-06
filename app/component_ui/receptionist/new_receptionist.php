@@ -2,6 +2,11 @@
 
 session_start();
 
+if (isset($_SESSION['id']) == false && isset($_SESSION['email']) == false && isset($_SESSION['name']) == false) {
+    header("location: login/login.php");
+    exit();
+}
+
 if (isset($_GET['error'])) {
     echo '<div class="login_error_display">' . $_GET['error'] . '</div>';
 }
@@ -18,11 +23,11 @@ if (isset($_GET['error'])) {
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
     </style>
     <style>
-    <?php include './receptionist.css';
-    ?>
+        <?php include './receptionist.css';
+        ?>
     </style>
 
 </head>
@@ -31,8 +36,7 @@ if (isset($_GET['error'])) {
 
 
 
-    <form id="edit_receptionist_wrap" action="../../component_crud/receptionist/create_receptionist.php" method="post"
-        enctype="multipart/form-data">
+    <form id="edit_receptionist_wrap" action="../../component_crud/receptionist/create_receptionist.php" method="post" enctype="multipart/form-data">
 
         <h1>New Receptionist</h1>
 
@@ -82,15 +86,15 @@ if (isset($_GET['error'])) {
     </form>
 
     <script>
-    function readURL(event) {
+        function readURL(event) {
 
-        var image = document.getElementById('new_receptionist_image');
-        image.src = URL.createObjectURL(event.target.files[0]);
-        image.style.display = "block";
+            var image = document.getElementById('new_receptionist_image');
+            image.src = URL.createObjectURL(event.target.files[0]);
+            image.style.display = "block";
 
-        console.log('URL =: ' + URL.createObjectURL(event.target.files[0]))
+            console.log('URL =: ' + URL.createObjectURL(event.target.files[0]))
 
-    }
+        }
     </script>
 
 </body>

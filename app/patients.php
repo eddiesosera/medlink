@@ -3,6 +3,12 @@
 session_start();
 include "config.php";
 
+if (isset($_SESSION['id']) == false && isset($_SESSION['email']) == false && isset($_SESSION['name']) == false) {
+    header("location: login/login.php");
+    exit();
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -14,9 +20,9 @@ include "config.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medlink: Patients</title>
     <style>
-    <?php include 'index.css';
-    include './style/patients_doctors.css';
-    ?>
+        <?php include 'index.css';
+        include './style/patients_doctors.css';
+        ?>
     </style>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 </head>
@@ -143,16 +149,16 @@ include "config.php";
             ?>
 
             <script type="text/javascript">
-            let sidebar = document.querySelector(".sidebar");
+                let sidebar = document.querySelector(".sidebar");
 
-            let top = localStorage.getItem("sidebar-scroll");
-            if (top !== null) {
-                sidebar.scrollTop = parseInt(top, 10);
-            }
+                let top = localStorage.getItem("sidebar-scroll");
+                if (top !== null) {
+                    sidebar.scrollTop = parseInt(top, 10);
+                }
 
-            window.addEventListener("beforeunload", () => {
-                localStorage.setItem("sidebar-scroll", sidebar.scrollTop);
-            });
+                window.addEventListener("beforeunload", () => {
+                    localStorage.setItem("sidebar-scroll", sidebar.scrollTop);
+                });
             </script>
 
 

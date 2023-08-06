@@ -51,7 +51,7 @@
             </a>
 
             <?php
-            if ($_SESSION['rank_id'] == 1) {
+            if (isset($_SESSION['rank_id']) == 1) {
                 echo '<a href="component_ui/receptionist/manage_receptionist.php">';
                 echo '<button id="sidebar-top-top-btmBtn">';
                 echo ' <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="sidebar-top-top-btmBtn-icon">';
