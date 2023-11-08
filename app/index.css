@@ -1,25 +1,73 @@
-body{
+body {
     display: flex;
 }
 
-.patients_wrap, .doctors_wrap{
+.patients_wrap,
+.doctors_wrap {
     position: absolute;
-    right:40px;
+    right: 40px;
     width: 77%;
 }
 
 /* Responsive Home Content */
 @media only screen and (max-width: 1300px) {
-    .home_content-wrap, .patients_wrap, .doctors_wrap{
+
+    .home_content-wrap,
+    .patients_wrap,
+    .doctors_wrap {
         /* margin-left: 281px; */
         width: 74%;
-        
-        }
+
+    }
 }
+
 @media only screen and (max-width: 1100px) {
-    .home_content-wrap, .patients_wrap, .doctors_wrap{
+
+    .home_content-wrap,
+    .patients_wrap,
+    .doctors_wrap {
         /* margin-left: 281px; */
         width: 65%;
-        
-        }
+
+    }
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* padding: 5px 10px 5px 5px;s */
+    padding-right: 36px;
+    /* Adjust padding as needed */
+    border: 1px solid #ccc;
+    /* border-radius: 4px; */
+    background-color: #fff;
+    /* width: 200px; */
+    /* Set a width for the select box */
+    background-image: url("./img/assets/arrow-down-s-line.png");
+    background-size: 16px 16px;
+    background-position: calc(100% - 12px) center !important;
+    /* background-position: right 100px center; */
+    /* Replace with your arrow image */
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #eee3c4;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #1b2423;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #eee3c4;
+    /* creates padding around scroll thumb */
 }

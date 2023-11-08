@@ -1,46 +1,47 @@
-body{
+body {
     background: #F5F0E4;
     font-family: Archivo;
 }
-#edit_receptionist_wrap{
+
+#edit_receptionist_wrap {
     display: flex;
     flex-direction: column;
     margin: auto;
 }
 
 /* MANAGE ACCESS */
-.manageAccess_wrap{
+.manageAccess_wrap {
     width: 90%;
     margin: 0 auto;
     padding: 40px;
 }
 
-.manageAccess_topWrap{
+.manageAccess_topWrap {
     display: flex;
     justify-content: space-between;
 }
 
-.primary_btn{
-    width: fit-content; 
-    height: 40px; 
+.primary_btn {
+    width: fit-content;
+    height: 40px;
     padding: 0 15px;
     background: #1b2423;
     color: #FFF1C6;
     border: none;
-    border-radius: 10px; 
+    border-radius: 10px;
     font-family: Archivo;
     font-size: 16px;
     font-weight: 500 !important;
 }
 
-.receptionist_List_wrap{
+.receptionist_List_wrap {
     background: #fffefa;
     border: 0.5px solid #eee3c4;
     border-radius: 20px;
     margin-top: 40px;
 }
 
-.receptionist_wrap{
+.receptionist_wrap {
     list-style-type: none;
     display: flex;
     margin: 0;
@@ -51,7 +52,7 @@ body{
     justify-content: space-between;
 }
 
-.receptionist_itmHead{
+.receptionist_itmHead {
     background: #f8f7f2;
     border-radius: 15px;
     padding: 30px;
@@ -65,37 +66,37 @@ body{
     color: #1b2423;
 }
 
-.receptionist_itm_img{
+.receptionist_itm_img {
     width: 150px;
     height: 150px !important;
     border-radius: 150px;
     object-fit: cover;
 }
 
-.receptionist_itm_name{
+.receptionist_itm_name {
     font-weight: 600;
     margin-bottom: 5px;
     font-size: 16px;
 }
 
-.receptionist_itm_rank{
+.receptionist_itm_rank {
     font-weight: 600;
     color: #847b62;
 }
 
-.rec_itm_dvdr{
+.rec_itm_dvdr {
     padding: 8px 0;
 }
 
-.rec_itm_dvdr_top{
+.rec_itm_dvdr_top {
     margin-top: 20px;
 }
 
-.secondary_btn_dngr{
-    border:0.5px solid #da2825; 
-    padding:10px;
-    border-radius:8px;
-    color:#da2825;
+.secondary_btn_dngr {
+    border: 0.5px solid #da2825;
+    padding: 10px;
+    border-radius: 8px;
+    color: #da2825;
     font-size: 14px;
     font-weight: 500;
     background: none;
@@ -106,14 +107,14 @@ body{
 
 /* NEW RECEPTIONIST */
 
-#edit_receptionist_wrap{
+#edit_receptionist_wrap {
     width: fit-content;
     margin: 0 auto;
     padding: 20px;
     width: 30%;
 }
 
-.new_receptionist_inforWrap{
+.new_receptionist_inforWrap {
     background: #fffefa;
     border: 0.5px solid #eee3c4;
     border-radius: 20px;
@@ -126,18 +127,18 @@ body{
     width: fit-content;
 }
 
-.new_receptionist_profile_wrap{
+.new_receptionist_profile_wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#new_UploadImg{
-margin: 0 auto;
-width: -webkit-fill-available;
+#new_UploadImg {
+    margin: 0 auto;
+    width: -webkit-fill-available;
 }
 
-#new_receptionist_image{
+#new_receptionist_image {
     width: 120px;
     height: 120px;
     object-fit: cover;
@@ -146,7 +147,7 @@ width: -webkit-fill-available;
     margin-bottom: 10px;
 }
 
-input{
+input {
     padding: 12px;
     border-radius: 8px;
     border: 0.5px solid #d9d4c4;
@@ -154,9 +155,10 @@ input{
 }
 
 input:-internal-autofill-selected {
-background-color: #f8e8b9;
+    background-color: #f8e8b9;
 }
-select{
+
+select {
     padding: 12px;
     border-radius: 8px;
     border: 0.5px solid #d9d4c4;
@@ -169,43 +171,43 @@ select.new_receptionist_rank_id option {
     padding: 10px;
 }
 
-.new_receptionist_name_wrap{
+.new_receptionist_name_wrap {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.new_receptionist_phone_wrap{
+.new_receptionist_phone_wrap {
     display: flex;
     gap: 20px;
 }
 
-.new_receptionist_name_dob{
+.new_receptionist_name_dob {
     display: flex;
     flex-direction: column;
 }
 
-.new_receptionist_name_dob_gndr{
+.new_receptionist_name_dob_gndr {
     display: flex;
     gap: 20px;
 }
 
-#new_receptionist_age{
+#new_receptionist_age {
     width: 100%;
 }
 
-.new_receptionist_gender{
-width: 100%;
+.new_receptionist_gender {
+    width: 100%;
 }
 
-.new_receptionist_btn{
-    width: 100%; 
-    height: 40px; 
+.new_receptionist_btn {
+    width: 100%;
+    height: 40px;
     padding: 0 20px;
     background: #1b2423;
     color: #FFF1C6;
     border: none;
-    border-radius: 10px; 
+    border-radius: 10px;
     font-family: Archivo;
     font-size: 15px;
     font-weight: 500 !important;
@@ -215,14 +217,14 @@ width: 100%;
 
 
 /* EDIT RECEPTIONIST */
-#edit_receptionist_wrap{
+#edit_receptionist_wrap {
     width: 30%;
     display: flex;
     flex-direction: column;
-   
+
 }
 
-#edit_receptionist_header{
+#edit_receptionist_header {
     font-size: 36px;
     font-weight: 600;
     font-family: Archivo;
@@ -231,8 +233,8 @@ width: 100%;
     padding: 0;
 }
 
-.edit_receptionist_info{
-    background: #fffefa ;
+.edit_receptionist_info {
+    background: #fffefa;
     border-radius: 15px;
     border: 0.5px solid #eee3c4;
     display: flex;
@@ -242,7 +244,7 @@ width: 100%;
     width: 100%;
 }
 
-#imgEdit{
+#imgEdit {
     cursor: pointer;
     border: solid 0.5px #0B423B;
     color: #0B423B;
@@ -254,39 +256,63 @@ width: 100%;
     margin-bottom: 10px;
 }
 
-.edit_receptionist_names{
+.edit_receptionist_names {
     display: flex;
     gap: 10px;
 }
 
-#edit_receptionist_name, #edit_receptionist_surname,#edit_receptionist_email,#edit_receptionist_phone_number {
+#edit_receptionist_name,
+#edit_receptionist_surname,
+#edit_receptionist_email,
+#edit_receptionist_phone_number {
     width: 100%;
 }
 
 
-.edit_receptionist_contacts{
+.edit_receptionist_contacts {
     display: flex;
     gap: 10px;
     width: 100%;
 }
 
-.edit_show_password{
+.edit_show_password {
     display: flex;
     font-size: 12px;
     align-items: center;
 }
 
-#edit_receptionist_btn{
-    width: 100%; 
-    height: 40px; 
+#edit_receptionist_btn {
+    width: 100%;
+    height: 40px;
     padding: 0 20px;
     background: #1b2423;
     color: #FFF1C6;
     border: none;
-    border-radius: 10px; 
+    border-radius: 10px;
     font-family: Archivo;
     font-size: 14px;
     font-weight: 500 !important;
     margin-top: 20px;
     cursor: pointer;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* padding: 5px 10px 5px 5px;s */
+    padding-right: 36px;
+    /* Adjust padding as needed */
+    border: 1px solid #ccc;
+    /* border-radius: 4px; */
+    background-color: #fff;
+    /* width: 200px; */
+    /* Set a width for the select box */
+    background-image: url("../../img/assets/arrow-down-s-line.png");
+    background-size: 16px 16px;
+    background-position: calc(100% - 12px) center !important;
+    /* background-position: right 100px center; */
+    /* Replace with your arrow image */
+    background-repeat: no-repeat;
+    background-position: right center;
 }

@@ -1,11 +1,11 @@
-body{
+body {
     background: #F5F0E4;
     font-family: 'Archivo';
 }
 
 /* NEW PATIENT */
 
-.new_patient_wrap{
+.new_patient_wrap {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -13,12 +13,12 @@ body{
     margin-top: 40px;
 }
 
-.new_patient_head{
+.new_patient_head {
     font-size: 36px;
     font-weight: 600;
 }
 
-.new_patient_form_wrap{
+.new_patient_form_wrap {
     background: #fffefa;
     border: 0.5px solid #eee3c4;
     border-radius: 20px;
@@ -30,16 +30,17 @@ body{
 }
 
 
-input{
+input {
     padding: 12px;
     border-radius: 8px;
     border: 0.5px solid #d9d4c4;
 }
 
 input:-internal-autofill-selected {
-background-color: #f8e8b9;
+    background-color: #f8e8b9;
 }
-select{
+
+select {
     padding: 12px;
     border-radius: 8px;
     border: 0.5px solid #d9d4c4;
@@ -47,19 +48,19 @@ select{
     font-family: Archivo !important;
 }
 
-.form_group_section{
+.form_group_section {
     display: flex;
     gap: 10px;
 }
 
-.primary_btn{
-    width: fit-content; 
-    height: 40px; 
+.primary_btn {
+    width: fit-content;
+    height: 40px;
     padding: 0 15px;
     background: #1b2423;
     color: #FFF1C6;
     border: none;
-    border-radius: 10px; 
+    border-radius: 10px;
     font-family: Archivo;
     font-size: 16px;
     font-weight: 500 !important;
@@ -67,6 +68,28 @@ select{
     width: 100%;
 }
 
-.new_patient_medicalAid, .dropdown{
+.new_patient_medicalAid,
+.dropdown {
     width: 100%;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* padding: 5px 10px 5px 5px;s */
+    padding-right: 36px;
+    /* Adjust padding as needed */
+    border: 1px solid #ccc;
+    /* border-radius: 4px; */
+    background-color: #fff;
+    /* width: 200px; */
+    /* Set a width for the select box */
+    background-image: url("../../img/assets/arrow-down-s-line.png");
+    background-size: 16px 16px;
+    background-position: calc(100% - 12px) center !important;
+    /* background-position: right 100px center; */
+    /* Replace with your arrow image */
+    background-repeat: no-repeat;
+    background-position: right center;
 }

@@ -1,21 +1,22 @@
-body{
+body {
     font-family: 'Archivo';
     background: #F5F0E4;
 }
-.home_content-wrap{
-/* margin-left: 281px; */
-position: absolute;
-width: 80%;
-right: 20px;
+
+.home_content-wrap {
+    /* margin-left: 281px; */
+    position: absolute;
+    width: 80%;
+    right: 20px;
 
 }
 
-.home_content_top-wrap{
-width: 100%;
-height: 350px;
+.home_content_top-wrap {
+    width: 100%;
+    height: 350px;
 }
 
-.home_content_top-imgbg{
+.home_content_top-imgbg {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -25,38 +26,39 @@ height: 350px;
 
 /* Responsive Home Content */
 @media only screen and (max-width: 1300px) {
-    .home_content-wrap{
+    .home_content-wrap {
         /* margin-left: 281px; */
         width: 74%;
-        
-        }
+
+    }
 }
+
 @media only screen and (max-width: 1100px) {
-    .home_content-wrap{
+    .home_content-wrap {
         /* margin-left: 281px; */
         width: 65%;
-        
-        }
+
+    }
 }
 
-.home_content_top-quoteText{
-position: absolute;
-top: 0;
-font-size: 36px;
-color: #F6F2E6;
-height: 350px;
-display: flex;
-align-items: center;
-justify-content: center;
-width: 100%;
+.home_content_top-quoteText {
+    position: absolute;
+    top: 0;
+    font-size: 36px;
+    color: #F6F2E6;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.quoteText{
-width: 50%;
-text-align: center;
+.quoteText {
+    width: 50%;
+    text-align: center;
 }
 
-.home_content_top_interaction-wrap{
+.home_content_top_interaction-wrap {
     display: flex;
     position: absolute;
     top: 325px;
@@ -65,7 +67,7 @@ text-align: center;
     gap: 10px;
 }
 
-.home_content_top_interaction-search-wrap{
+.home_content_top_interaction-search-wrap {
     display: flex;
     background: #FCFBF7;
     height: 45px;
@@ -78,12 +80,12 @@ text-align: center;
     max-width: 40%;
 }
 
-.searchIcon{
+.searchIcon {
     font-size: 24px;
     color: #1B2423;
 }
 
-#searchInput{
+#searchInput {
     outline: none;
     stroke: none;
     border: none;
@@ -94,7 +96,7 @@ text-align: center;
     width: 20vw;
 }
 
-.home_content_top_interaction-newAppointment-wrap{
+.home_content_top_interaction-newAppointment-wrap {
     display: flex;
     cursor: pointer;
     background: #1b2423;
@@ -106,11 +108,11 @@ text-align: center;
     align-items: center;
 }
 
-.addBtn{
+.addBtn {
     font-size: 24px;
 }
 
-.home_content_top_interaction-newAppointment-text{
+.home_content_top_interaction-newAppointment-text {
     font-size: 14px;
     margin-left: 10px;
 }
@@ -118,7 +120,7 @@ text-align: center;
 
 /* HOME: WEEKLY DATES FOR APPOINTMENTS */
 
-.appointments_wrap{
+.appointments_wrap {
     /* width: 100%; */
     padding: 20px;
     background: #fbf8ef;
@@ -127,7 +129,7 @@ text-align: center;
     border: 0.5px solid #eee3c4;
 }
 
-.appointments_weekly_dates-wrap{
+.appointments_weekly_dates-wrap {
     display: flex;
     /* width: 100%; */
     /* justify-content: space-between; */
@@ -136,37 +138,37 @@ text-align: center;
     gap: 10px;
 }
 
-.weekly_date-itm{
+.weekly_date-itm {
     border: 0.5px solid #4F6A66;
     width: 100%;
     padding: 20px 20px;
     border-radius: 12px;
 
-    color:  #4F6A66;
+    color: #4F6A66;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.selected_weekly_date-itm{
+.selected_weekly_date-itm {
     color: #E6F6F4;
     background-color: #1b2423 !important;
     color: #FFF1C6 !important;
     border: none !important;
 }
 
-.dates-day{
+.dates-day {
     font-size: 21px;
     font-weight: 600;
 }
 
-.dates{
+.dates {
     font-size: 13px;
     font-weight: 400;
 }
 
-.appoinment_itemWrap{
+.appoinment_itemWrap {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -175,36 +177,57 @@ text-align: center;
     margin: 0;
 }
 
-.appoinment_item{
-background: #f2f0e8;
-padding: 40px;
-border-radius: 15px;
+.appoinment_item {
+    background: #f2f0e8;
+    padding: 40px;
+    border-radius: 15px;
 }
 
-.appoinment_item_inner{
-display: flex;
-justify-content: space-between;
+.appoinment_item_inner {
+    display: flex;
+    justify-content: space-between;
 }
 
-.appoinment_btn_wrap{
+.appoinment_btn_wrap {
     display: flex;
     gap: 20px;
 }
 
-.secondary_btn_dngr{
-    border:0.5px solid #da2825; 
-    padding:10px;
-    border-radius:8px;
-    color:#da2825;
+.secondary_btn_dngr {
+    border: 0.5px solid #da2825;
+    padding: 10px;
+    border-radius: 8px;
+    color: #da2825;
     font-size: 14px;
     font-weight: 500;
 }
 
-.secondary_btn_actn{
-    border:0.5px solid #168371; 
-    padding:10px;
-    border-radius:8px;
-    color:#168371;
+.secondary_btn_actn {
+    border: 0.5px solid #168371;
+    padding: 10px;
+    border-radius: 8px;
+    color: #168371;
     font-size: 14px;
     font-weight: 500;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* padding: 5px 10px 5px 5px;s */
+    padding-right: 36px;
+    /* Adjust padding as needed */
+    border: 1px solid #ccc;
+    /* border-radius: 4px; */
+    background-color: #fff;
+    /* width: 200px; */
+    /* Set a width for the select box */
+    background-image: url("../img/assets/arrow-down-s-line.png");
+    background-size: 16px 16px;
+    background-position: calc(100% - 12px) center !important;
+    /* background-position: right 100px center; */
+    /* Replace with your arrow image */
+    background-repeat: no-repeat;
+    background-position: right center;
 }

@@ -1,40 +1,46 @@
-body{
+body {
     background: #F5F0E4;
     font-family: 'Archivo';
 }
 
-a{
+a {
     color: inherit;
     margin: 0;
     padding: 0;
 }
 
-.patients_wrap, .doctors_wrap{
-display: flex;
-flex-direction: column;
-margin-top: 40px;
+.patients_wrap,
+.doctors_wrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
 
 }
 
-.patients_top_wrap, .doctors_top_wrap{
+.patients_top_wrap,
+.doctors_top_wrap {
     display: flex;
     justify-content: space-between;
-align-items: center;
-width: 100%;
+    align-items: center;
+    width: 100%;
 }
 
-.patients_top_wrap_l_heading, .doctors_top_wrap_l_heading{
+.patients_top_wrap_l_heading,
+.doctors_top_wrap_l_heading {
     font-size: 36px;
     font-family: Archivo;
     font-weight: 600;
 }
 
-.patients_top_wrap_r_interact_wrap, .doctors_top_wrap_r_interact_wrap{
-display: flex;
-gap: 10px;
+.patients_top_wrap_r_interact_wrap,
+.doctors_top_wrap_r_interact_wrap {
+    display: flex;
+    gap: 10px;
 }
 
-.top_primary_btn, .patients_top_wrap_r_interact_wrap_newPatient, .doctors_top_wrap_r_interact_wrap_newPatient{
+.top_primary_btn,
+.patients_top_wrap_r_interact_wrap_newPatient,
+.doctors_top_wrap_r_interact_wrap_newPatient {
     display: flex;
     cursor: pointer;
     background: #1b2423;
@@ -47,7 +53,9 @@ gap: 10px;
     font-weight: 500;
 }
 
-.top_secondary_btn , .patients_top_wrap_r_interact_wrap_newAppointment, .doctors_top_wrap_r_interact_wrap_newAppointment{
+.top_secondary_btn,
+.patients_top_wrap_r_interact_wrap_newAppointment,
+.doctors_top_wrap_r_interact_wrap_newAppointment {
     cursor: pointer;
     border: solid 0.5px #0B423B;
     color: #0B423B;
@@ -60,17 +68,15 @@ gap: 10px;
     font-weight: 500;
 }
 
-.hr_midbody{
-
-}
+.hr_midbody {}
 
 /* SEARCH BAR */
-.patients_body_wrap_r_list_top_l_interactive{
+.patients_body_wrap_r_list_top_l_interactive {
     display: flex;
     gap: 20px;
 }
 
-.home_content_top_interaction-wrap{
+.home_content_top_interaction-wrap {
     display: flex;
     position: absolute;
     top: 325px;
@@ -79,7 +85,7 @@ gap: 10px;
     gap: 10px;
 }
 
-.home_content_top_interaction-search-wrap{
+.home_content_top_interaction-search-wrap {
     display: flex;
     background: none;
     height: 36px;
@@ -92,12 +98,12 @@ gap: 10px;
     max-width: 40%;
 }
 
-.searchIcon{
+.searchIcon {
     font-size: 20px;
     color: #1B2423;
 }
 
-#searchInput{
+#searchInput {
     outline: none;
     stroke: none;
     border: none;
@@ -109,7 +115,8 @@ gap: 10px;
     background: none;
 }
 
-.patient_search, .primary_btn_sml{
+.patient_search,
+.primary_btn_sml {
     display: flex;
     cursor: pointer;
     background: #1b2423;
@@ -121,7 +128,7 @@ gap: 10px;
     align-items: center;
 }
 
-.patients_patientItm_link{
+.patients_patientItm_link {
     display: flex;
     align-items: center;
     gap: 50px;
@@ -142,26 +149,27 @@ gap: 10px;
     /* box-shadow: -5px 5px 20px rgba(54, 52, 47, 0.3)  ;  */
 }
 
-.patients_body_wrap, .doctors_body_wrap{
-display: flex;
-flex-direction: row;
-margin-top: 40px;
-background: #fffefa;
-border: 0.5px solid #eee3c4;
-border-radius: 15px;
-padding: 40px;
-justify-content: space-between;
+.patients_body_wrap,
+.doctors_body_wrap {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    background: #fffefa;
+    border: 0.5px solid #eee3c4;
+    border-radius: 15px;
+    padding: 40px;
+    justify-content: space-between;
 }
 
-.patients_body_l_wrap_view, .doctors_body_l_wrap_view{
+.patients_body_l_wrap_view,
+.doctors_body_l_wrap_view {}
 
+.patients_body_wrap_r_list,
+.doctorss_body_wrap_r_list {
+    width: -webkit-fill-available;
 }
 
-.patients_body_wrap_r_list, .doctorss_body_wrap_r_list{
-width: -webkit-fill-available;
-}
-
-.patients_body_wrap_r_list_patientsWrap{
+.patients_body_wrap_r_list_patientsWrap {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -173,7 +181,7 @@ width: -webkit-fill-available;
     color: #242321;
 }
 
-.patients_body_wrap_r_list_patientItm{
+.patients_body_wrap_r_list_patientItm {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -183,24 +191,24 @@ width: -webkit-fill-available;
     background: #f8f7f2;
 }
 
-.patientItm_img{
+.patientItm_img {
     height: 85px;
     width: 85px;
     object-fit: cover;
     border-radius: 75px;
 }
 
-.patientItm_deetsWrap{
+.patientItm_deetsWrap {
     display: flex;
-    gap:20px;
+    gap: 20px;
 }
 
-.Patient_col_label{
+.Patient_col_label {
     font-size: 14px;
     color: #989282;
 }
 
-.patientItm_detailWrap{
+.patientItm_detailWrap {
     width: 120px;
     display: flex;
     flex-direction: column;
@@ -209,16 +217,16 @@ width: -webkit-fill-available;
     gap: 10px;
 }
 
-.patient_btn_wrap{
+.patient_btn_wrap {
     display: flex;
     flex-direction: column;
 }
 
-.secondary_btn{
-    border:0.5px solid #168371; 
-    padding:10px;
-    border-radius:8px;
-    color:#168371;
+.secondary_btn {
+    border: 0.5px solid #168371;
+    padding: 10px;
+    border-radius: 8px;
+    color: #168371;
     font-size: 14px;
     font-weight: 500;
     width: 100%;
@@ -226,18 +234,18 @@ width: -webkit-fill-available;
     margin-bottom: 10px;
 }
 
-.secondary_btn_dngr{
-    border:0.5px solid #da2825; 
-    padding:10px;
-    border-radius:8px;
-    color:#da2825;
+.secondary_btn_dngr {
+    border: 0.5px solid #da2825;
+    padding: 10px;
+    border-radius: 8px;
+    color: #da2825;
     font-size: 14px;
     font-weight: 500;
     width: 100%;
     background: none;
 }
 
-.patients_body_l_bttm{
+.patients_body_l_bttm {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -246,30 +254,51 @@ width: -webkit-fill-available;
 
 /* SELECTED PATIENT */
 
-.selected_patient_img{
+.selected_patient_img {
     width: 100%;
     height: 150px;
     border-radius: 3px;
     object-fit: cover;
 }
 
-.selected_patients_info_wrap{
+.selected_patients_info_wrap {
     margin: 15px 0;
     font-size: 15px;
     display: flex;
     flex-direction: column;
-    
+
 }
 
-.selected_patients_body_l_mid_itm{
-margin: 8px 0;
-display: flex;
-flex-direction: column;
-gap: 5px;
+.selected_patients_body_l_mid_itm {
+    margin: 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.selected_patients_label{
+.selected_patients_label {
     font-size: 13px;
     color: #989282;
     font-weight: 300;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* padding: 5px 10px 5px 5px;s */
+    padding-right: 36px;
+    /* Adjust padding as needed */
+    border: 1px solid #ccc;
+    /* border-radius: 4px; */
+    background-color: #fff;
+    /* width: 200px; */
+    /* Set a width for the select box */
+    background-image: url("../img/assets/arrow-down-s-line.png");
+    background-size: 16px 16px;
+    background-position: calc(100% - 12px) center !important;
+    /* background-position: right 100px center; */
+    /* Replace with your arrow image */
+    background-repeat: no-repeat;
+    background-position: right center;
 }
