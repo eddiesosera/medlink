@@ -70,7 +70,7 @@
     <div class="sidebar-mid-container">
         <?php
         // Route to appoinments of today
-        echo '<a href="/DV200_Term2_Receptionist-Dashboard/Term-2/app/index.php?date=' . date("D-d-M") . '"s >';
+        echo '<a href="/MedLink/Term-2/app/index.php?date=' . date("D-d-M") . '"s >';
         ?>
         <div class="active-sidebar-wrap" id="sidebar-mid-homeWrap">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="active-sidebar-icon"
@@ -83,7 +83,7 @@
             <div class="active-sidebar-text" id="sidebar-mid-home-txt">Appointments</div>
         </div>
         </a>
-        <a href="/DV200_Term2_Receptionist-Dashboard/Term-2/app/patients.php?id=1">
+        <a href="/MedLink/Term-2/app/patients.php?id=1">
             <div class="inactive-sidebar-wrap" id="sidebar-mid-patientWrap">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="inactive-sidebar-icon"
                     id="sidebar-mid-patient-icon">
@@ -95,7 +95,7 @@
                 <div class="inactive-sidebar-text" id="sidebar-mid-patient-txt">Patients</div>
             </div>
         </a>
-        <a href="/DV200_Term2_Receptionist-Dashboard/Term-2/app/doctors.php">
+        <a href="/MedLink/Term-2/app/doctors.php">
             <div class="inactive-sidebar-wrap" id="sidebar-mid-doctorWrap">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="inactive-sidebar-icon"
                     id="sidebar-mid-doctor-icon">
@@ -128,50 +128,51 @@
     console.log(window.location.pathname)
 
     function changeActivePage() {
+        const pages = [{
+                path: '/MedLink/Term-2/app/index.php',
+                sidebarId: 'sidebar-mid-homeWrap',
+                iconId: 'sidebar-mid-home-icon',
+            },
+            {
+                path: '/MedLink/Term-2/app/',
+                sidebarId: 'sidebar-mid-homeWrap',
+                iconId: 'sidebar-mid-home-icon',
+            },
+            {
+                path: '/MedLink/Term-2/app/patients.php',
+                sidebarId: 'sidebar-mid-patientWrap',
+                iconId: 'sidebar-mid-patient-icon',
+            },
+            {
+                path: '/MedLink/Term-2/app/doctors.php',
+                sidebarId: 'sidebar-mid-doctorWrap',
+                iconId: 'sidebar-mid-doctor-icon',
+            },
+            // Add more pages as needed
+        ];
 
-        // Activate or Deactivate HOME Page on Navbar based on pathname
-        if (window.location.pathname === '/DV200_Term2_Receptionist-Dashboard/Term-2/app/index.php') {
-            document.getElementById("sidebar-mid-homeWrap").classList.add('active-sidebar-wrap');
-            document.getElementById("sidebar-mid-home-icon").classList.add('active-sidebar-icon');
-            document.getElementById("sidebar-mid-homeWrap").classList.remove('inactive-sidebar-wrap');
-            document.getElementById("sidebar-mid-home-icon").classList.remove('inactive-sidebar-icon');
+        const currentPath = window.location.pathname;
 
-            // alert('Home')
-        } else {
-            document.getElementById("sidebar-mid-homeWrap").classList.remove('active-sidebar-wrap');
-            document.getElementById("sidebar-mid-home-icon").classList.remove('active-sidebar-icon');
-            document.getElementById("sidebar-mid-homeWrap").classList.add('inactive-sidebar-wrap');
-            document.getElementById("sidebar-mid-home-icon").classList.add('inactive-sidebar-icon');
-        }
+        for (const page of pages) {
+            const {
+                path,
+                sidebarId,
+                iconId
+            } = page;
+            const sidebarElement = document.getElementById(sidebarId);
+            const iconElement = document.getElementById(iconId);
 
-        // Activate or Deactivate PATIENTS Page on Navbar based on pathname
-        if (window.location.pathname === '/DV200_Term2_Receptionist-Dashboard/Term-2/app/patients.php') {
-            document.getElementById("sidebar-mid-patientWrap").classList.add('active-sidebar-wrap');
-            document.getElementById("sidebar-mid-patient-icon").classList.add('active-sidebar-icon');
-            document.getElementById("sidebar-mid-patientWrap").classList.remove('inactive-sidebar-wrap');
-            document.getElementById("sidebar-mid-patient-icon").classList.remove('inactive-sidebar-icon');
-
-            // alert('Patients')
-        } else {
-            document.getElementById("sidebar-mid-patientWrap").classList.remove('active-sidebar-wrap');
-            document.getElementById("sidebar-mid-patient-icon").classList.remove('active-sidebar-icon');
-            document.getElementById("sidebar-mid-patientWrap").classList.add('inactive-sidebar-wrap');
-            document.getElementById("sidebar-mid-patient-icon").classList.add('inactive-sidebar-icon');
-        }
-
-        // Activate or Deactivate DOCTORS Page on Navbar based on pathname
-        if (window.location.pathname === '/DV200_Term2_Receptionist-Dashboard/Term-2/app/doctors.php') {
-            document.getElementById("sidebar-mid-doctorWrap").classList.add('active-sidebar-wrap');
-            document.getElementById("sidebar-mid-doctor-icon").classList.add('active-sidebar-icon');
-            document.getElementById("sidebar-mid-doctorWrap").classList.remove('inactive-sidebar-wrap');
-            document.getElementById("sidebar-mid-doctor-icon").classList.remove('inactive-sidebar-icon');
-
-            // alert('Doctor')
-        } else {
-            document.getElementById("sidebar-mid-doctorWrap").classList.remove('active-sidebar-wrap');
-            document.getElementById("sidebar-mid-doctor-icon").classList.remove('active-sidebar-icon');
-            document.getElementById("sidebar-mid-doctorWrap").classList.add('inactive-sidebar-wrap');
-            document.getElementById("sidebar-mid-doctor-icon").classList.add('inactive-sidebar-icon');
+            if (currentPath === path) {
+                sidebarElement.classList.add('active-sidebar-wrap');
+                iconElement.classList.add('active-sidebar-icon');
+                sidebarElement.classList.remove('inactive-sidebar-wrap');
+                iconElement.classList.remove('inactive-sidebar-icon');
+            } else {
+                sidebarElement.classList.remove('active-sidebar-wrap');
+                iconElement.classList.remove('active-sidebar-icon');
+                sidebarElement.classList.add('inactive-sidebar-wrap');
+                iconElement.classList.add('inactive-sidebar-icon');
+            }
         }
     }
     </script>

@@ -14,7 +14,7 @@ include "config.php";
 
 echo '<ul class="appoinment_itemWrap">';
 
-$slctd_date = $_GET['date'];
+$slctd_date = isset($_GET['date']);
 
 
 $query = "

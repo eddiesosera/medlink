@@ -49,8 +49,12 @@
                     // Route dates. Default date is today
 
                     echo '<a href="index.php?date=' . date("D-d-M", $startdate);
-                    if ($_GET['date'] == $slctd_date) {
-                        echo '" type="submit" class="weekly_date-itm  selected_weekly_date-itm' . '" id="selected_weekly_date weekly_date-itm';
+                    if (isset($_GET['date'])) {
+                        if ($_GET['date'] == $slctd_date) {
+                            echo '" type="submit" class="weekly_date-itm  selected_weekly_date-itm' . '" id="selected_weekly_date weekly_date-itm';
+                        } else {
+                            echo '" type="submit" class="weekly_date-itm" id="weekly_date-itm';
+                        }
                     } else {
                         echo '" type="submit" class="weekly_date-itm" id="weekly_date-itm';
                     }
