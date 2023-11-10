@@ -78,7 +78,7 @@ Medlink serves as an intuitive and efficient dashboard specifically tailored for
    ```sh
    git clone https://github.com/eddiesosera/medlink.git
    ```
-2. Start the client server with `XAMP` then navigate to file in you `web browser` (URL section).
+2. Start the client server with `XAMP` then navigate to the file path in you `web browser` (URL section).
 3. Import the database located in `app/clinicdb.sql` through the php admin dashboard found on `localhost/phpmyadmin` in your web browser.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
