@@ -28,7 +28,7 @@
     <a href="https://github.com/eddiesosera/medlink/blob/main/"><strong>Explore the docs</strong></a>
     <br />
     <br />
-    <a href="https://drive.google.com/file/d/1xJGy-j4TskFiKSpnWFAl9HrnYCG_uiMS/view?usp=sharing">View Demo</a>
+    <a href="https://drive.google.com/file/d/1pPykEWWB-4WuMN6KEQ9q6NJCiKDafijP/view?usp=sharing">View Demo</a>
     ·
     <a href="https://github.com/eddiesosera/medlink/issues">Report Bug</a>
     ·
@@ -66,7 +66,7 @@ Medlink serves as an intuitive and efficient dashboard specifically tailored for
 - [![PHP][php]][php-url]
 - [![MySQL][mysql]][mysql-url]
 - [![JavaScript][javascript]][javascript-url]
-- [![HTML][html]][html-url]
+<!-- - [![HTML][html]][html-url] -->
 - [![bootstrap][bootstrap]][bootstrap-url]
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,18 +78,8 @@ Medlink serves as an intuitive and efficient dashboard specifically tailored for
    ```sh
    git clone https://github.com/eddiesosera/medlink.git
    ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-3. Start the client server in `client/term4-group2-qna`
-   ```sh
-   npm start
-   ```
-4. Start the backend server in `server` file
-   ```sh
-   npm run dev
-   ```
+2. Start the client server with `XAMP` then navigate to file in you `web browser` (URL section).
+3. Import the database located in `app/clinicdb.sql` through the php admin dashboard found on `localhost/phpmyadmin` in your web browser.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -145,9 +135,6 @@ A head receptionist has the special feature to manage ordinary receptions by rem
 <br/>
 <br/>
 
-<br/>
-<br/>
-
 #### Technical Funtionality
 
 - `CRUD funtionality` on receptionist.
@@ -199,7 +186,7 @@ Even though I didnt have any background on `Backend` programmming I was still fa
 
 ## Final Outcomes
 
-[View Demonstration](https://drive.google.com/file/d/1xJGy-j4TskFiKSpnWFAl9HrnYCG_uiMS/view?usp=sharing)
+[View Demonstration](https://drive.google.com/file/d/1pPykEWWB-4WuMN6KEQ9q6NJCiKDafijP/view?usp=sharing)
 
 <!-- CONCLUSION -->
 
