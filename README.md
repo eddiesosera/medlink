@@ -307,7 +307,7 @@ Distributed under the MIT License. See [License](https://opensource.org/license/
 [mysql-url]: https://www.mysql.com/
 [javascript]: https://img.shields.io/badge/javascript-20232A?style=for-the-badge&html=javascript&logoColor=#777BB4
 [javascript-url]: https://www.javascript.com/
-[html]: https://img.shields.io/badge/HTML?style=for-the-badge&logo=JSON%20web%20tokens
+[html]: https://img.shields.io/badge/HTML?style=for-the-badge&mysql=html&logoColor=#777BB4
 [html-url]: https://www.html.com
 [bootstrap]: https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white
 [bootstrap-url]: https://getbootstrap.com/
@@ -323,18 +323,17 @@ Distributed under the MIT License. See [License](https://opensource.org/license/
 
 [banner]: assets/readme/banner.png
 [header]: assets/readme/header.png
-[home]: assets/readme/features/macloops_feature_home.png
-[doctors]: assets/readme/features/macloops_feature_doctors.png
-[editaccount]: assets/readme/features/macloops_feature_editAccount.png
-[manageaccess]: assets/readme/features/macloops_feature_manageAccess.png
-[newappointment]: assets/readme/features/macloops_feature_newAppointment.png
-[newpatient]: assets/readme/features/macloops_feature_newPatient.png
-[patients]: assets/readme/features/macloops_feature_patients.png
+[home]: assets/readme/features/medlink_feature_home.png
+[doctors]: assets/readme/features/medlink_feature_doctors.png
+[editaccount]: assets/readme/features/medlink_feature_editAccount.png
+[manageaccess]: assets/readme/features/medlink_feature_manageAccess.png
+[newappointment]: assets/readme/features/medlink_feature_newAppointment.png
+[newpatient]: assets/readme/features/medlink_feature_newPatient.png
+[patients]: assets/readme/features/medlink_feature_patients.png
 
 <!-- Process-->
 
-[usecase]: assets/readme/process/useCase.png
-[flowdiagram]: assets/readme/process/flowDiagram.png
+[erd]: assets/readme/process/erd.png
 
 <!-- Wireframes-->
 
